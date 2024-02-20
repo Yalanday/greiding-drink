@@ -1,1 +1,35 @@
-/* здесь используйте глобальные переменные */
+//*** font-family ***//
+// $font-page: "Oswald", "Arial", sans-serif;
+// $font-second: "Lato", "Arial", sans-serif;
+
+//*** font-size ***//
+$font-small: 12px;
+$font-medium: 16px;
+$font-large: 24px;
+$font-big: 36px;
+$font-huge: 60px;
+
+//*** colors ***//
+$default-black: #000000;
+// $dark-color: #111111;
+$default-white: #ffffff;
+// $basic-green: #68b738;
+
+// $light-grey-a: #bababa;
+// $light-grey-b: #ebebeb;
+// $light-grey-d: #cdcdcd;
+
+// $light-grey2: #f2f2f2;
+// $light-grey4: #f4f4f4;
+// $light-grey7: #e7e7e7;
+// $light-grey9: #d9d9d9;
+
+// $grey200: #222222;
+// $grey400: #444444;
+// $grey600: #666666;
+
+// $error-color: #ff8282;
+
+//*** media-width ***//
+$tablet-width: 768px;
+$desktop-width: 1440px;

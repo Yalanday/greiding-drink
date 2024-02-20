@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <div class="header__container">
+      <a class="header__logo" href="#">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desctop.svg">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+          <img src="images/logo-mobile.svg" width="32" height="36" alt="Логотип.">
+        </picture>
+      </a>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">Главная</li>
+          <li class="nav__item">Каталог</li>
+          <li class="nav__item">Доставка</li>
+          <li class="nav__item">О нас</li>
+        </ul>
+      </nav>
+      <div class="header__user-menu user-menu">
+        <ul class="user-menu__list">
+          <li class="user-menu__item">
+            <a href="#">
+              <img src="images/icons/user-icon.svg" width="16" height="16" alt="Иконка пользователя">
+            </a>
+          </li>
+          <li class="user-menu__item">
+            <a href="#">
+              <img src="images/icons/basket-icon.svg" width="16" height="16" alt="Корзина">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button class="header__toggle burger-button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+  </header>
+</body>
+
 </html>

@@ -1,0 +1,26 @@
+.nav {
+  position: absolute;
+  top: 100%;
+  width: 100%
+}
+
+.nav__list {
+  @include list-reset;
+  margin: 0 20px 0 -20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.nav__item {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  border-top: 1px solid silver;
+}
+
+.nav__item:last-child {
+  border-bottom: 1px solid silver;
+}
