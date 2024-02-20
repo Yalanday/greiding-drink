@@ -1,8 +1,8 @@
 /* GLOBAL */
 @import "./global/variables.scss";
 @import "./global/mixins.scss";
-@import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/global.scss";
 
 
 /* BLOCKS */
@@ -11,5 +11,11 @@
 @import "./blocks/nav.scss";
 @import "./blocks/user-menu.scss";
 @import "./blocks/burger-button.scss";
+@import "./blocks/button.scss";
+@import "./blocks/main.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/buy.scss";
+
 
 

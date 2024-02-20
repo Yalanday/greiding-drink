@@ -1,0 +1,48 @@
+.slider {
+  width: 100%;
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "badge"
+    "title"
+    "description"
+    "buy"
+  ;
+}
+
+.slider__badge {
+  grid-area: badge;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: $basic-violet;
+  text-align: center;
+}
+
+.slider__title {
+  grid-area: title;
+  margin: 0;
+  font-size: $font-big;
+  line-height: 48px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.slider__description {
+  grid-area: description;
+  margin: 0;
+  color: $dark-color;
+  font-size: $font-small;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.slider__buy {
+  grid-area: buy;
+}

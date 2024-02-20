@@ -1,0 +1,29 @@
+.buy {
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buy__container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.buy__old-price {
+  text-decoration: line-through;
+  color: $basic-violet;
+  font-size: 16px;
+  line-height: 32px;
+
+}
+
+.buy__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.buy__button {
+
+}
