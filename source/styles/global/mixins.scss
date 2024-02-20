@@ -1,0 +1,10 @@
+@mixin list-reset() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin link-style() {
+  display: block;
+  text-decoration: none;
+}
