@@ -6,6 +6,12 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: $font-page;
+  color: $dark-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+

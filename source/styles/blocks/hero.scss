@@ -1,8 +1,36 @@
 .hero {
-  background-color: $basic-bg;
-  padding: 20px 20px 60px;
+  width: 100%;
+  background: linear-gradient(to bottom, $basic-bg 100%, $default-white 0);
 }
 
-// .hero__slider {
-//   -bottom: 60px;
-// }
+@media (min-width: $tablet-width) {
+  .hero {
+    background: linear-gradient(to bottom, $basic-bg 75%, $default-white 25%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero {
+    background: linear-gradient(to bottom, $basic-bg 100%, $default-white 0);
+  }
+}
+
+.hero__container {
+  max-width: 320px;
+  padding: 20px 20px 60px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__container {
+    max-width: $tablet-width;
+    padding: 60px 20px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero__container {
+    max-width: $desktop-width;
+    padding: 30px 65px 84px;
+  }
+}

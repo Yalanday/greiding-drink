@@ -4,13 +4,50 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "image"
+    "picture"
     "badge"
     "title"
     "description"
     "buy"
   ;
 }
+
+@media (min-width: $tablet-width) {
+  .slider {
+    grid-template-areas:
+      "badge"
+      "title"
+      "description"
+      "buy"
+      "picture"
+    ;
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    grid-template-areas:
+      "picture badge"
+      "picture title"
+      "picture description"
+      "picture buy"
+
+    ;
+  }
+}
+
+
+
+.slider__picture {
+  grid-area: picture;
+}
+
+.slider__picture {
+  display: block;
+  margin: 0 auto;
+}
+
 
 .slider__badge {
   grid-area: badge;
@@ -23,6 +60,14 @@
   text-align: center;
 }
 
+@media (min-width: $desktop-width) {
+  .slider__badge {
+    text-align: left;
+    height: min-content;
+    margin-top: 180px;
+  }
+}
+
 .slider__title {
   grid-area: title;
   margin: 0;
@@ -31,6 +76,22 @@
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.02em;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__title {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__title {
+    text-align: left;
+    margin-top: -60px;
+    margin-bottom: 0;
+  }
 }
 
 .slider__description {
@@ -43,6 +104,37 @@
   text-align: center;
 }
 
+@media (min-width: $tablet-width) {
+  .slider__description {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__description {
+    text-align: left;
+    margin-top: -60px;
+    margin-bottom: 0;
+  }
+}
+
 .slider__buy {
   grid-area: buy;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__buy {
+    margin: 0 auto;
+    gap: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__buy {
+    margin-left: 0;
+    margin-top: -50px;
+  }
 }

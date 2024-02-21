@@ -1,10 +1,10 @@
 .burger-button {
+  padding: 0 0 0 21px;
   position: relative;
   width: 16px;
   height: 12px;
-  margin-left: 44px;
   border: none;
-  background-color:$default-white;
+  background-color: $default-white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +30,13 @@
     transform: translateY(6px);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .burger-button {
+    display: none;
+  }
+}
+
 
 // .burger-button--no-js {
 //   display: none;
