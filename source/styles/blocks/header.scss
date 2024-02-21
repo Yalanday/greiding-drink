@@ -1,10 +1,23 @@
 .header {
   position: relative;
   color: #333333;
-  // border: 0.5px solid silver;
   max-width: 320px;
   min-height: 60px;
+  margin: 0 auto;
 
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    position: static;
+    max-width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    max-width: $desktop-width;
+  }
 }
 
 .header__container {
@@ -12,5 +25,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
+@media (min-width: $desktop-width) {
+  .header__container {
+    padding: 22px 40px;
+  }
+}
+
+.header__logo {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.header__logo-description {
+  display: none;
+  width: 150px;
+  max-width: 170px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+}
+
+@media (min-width: $desktop-width) {
+  .header__logo-description {
+    display: block;
+  }
 }
