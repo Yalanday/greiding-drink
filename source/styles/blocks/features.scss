@@ -1,6 +1,26 @@
 .features__container {
   max-width: 320px;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 50px 20px 60px;
+  border: 0.5px solid silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .features__container {
+    max-width: $tablet-width;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__container {
+    max-width: $desktop-width;
+    padding: 100px 40px 120px;
+  }
 }
 
 .features__title {
@@ -12,7 +32,6 @@
   line-height: 16px;
   letter-spacing: 0.04em;
   text-align: center;
-
 }
 
 .features__description {
@@ -23,8 +42,48 @@
   text-align: center;
 }
 
+@media (min-width: $tablet-width) {
+  .features__description {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 64px;
+    margin-bottom: 60px
+  }
+}
+
 .features__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    flex-direction: row;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.features__item {
+  width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .features__item {
+    width: 350px;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    width: 320px;
+    padding: 0;
+  }
 }
 
 .features__item-title {
@@ -33,19 +92,117 @@
   font-weight: 700;
   line-height: 32px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .features__item-title {
+    flex-direction: row;
+    align-items: start;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features__item-title {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .features__item-title--speed::before {
-  content: '';
+  content: "";
+  display: block;
   width: 50px;
   height: 56px;
+  background-image: url("../../images/icons/speed-icon@1x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+@media (min-resolution: 2dppx) {
+  .features__item-title--speed::before {
+    background-image: url("../../images/icons/speed-icon@2x.png");
+  }
+}
 
+.features__item-title--fit::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 56px;
+  background-image: url("../../images/icons/fit-icon@1x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-resolution: 2dppx) {
+  .features__item-title--fit::before {
+    background-image: url("../../images/icons/fit-icon@2x.png");
+  }
+}
+
+.features__item-title--energy::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 56px;
+  background-image: url("../../images/icons/energy-icon@1x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-resolution: 2dppx) {
+  .features__item-title--energy::before {
+    background-image: url("../../images/icons/energy-icon@2x.png");
+  }
+}
+
+.features__item-title--eco::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 56px;
+  background-image: url("../../images/icons/eco-icon@1x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-resolution: 2dppx) {
+  .features__item-title--eco::before {
+    background-image: url("../../images/icons/eco-icon@2x.png");
+  }
+}
 
 .features__item-description {
+  margin: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .features__item-description {
+    padding-left: 70px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item-description {
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
 }

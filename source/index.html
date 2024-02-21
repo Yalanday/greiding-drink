@@ -116,7 +116,7 @@
                 Удобство
               </h3>
               <p class="features__item-description">
-                Легко помещается и в карман, и в маленькую сумочку
+                Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку
               </p>
             </li>
             <li class="features__item">
@@ -132,17 +132,167 @@
                 Экологичность
               </h3>
               <p class="features__item-description">
-                Вся упаковка сделана из перерабатываемых материалов
+                Вся упаковка сделана из&nbsp;перерабатываемых материалов
               </p>
             </li>
           </ul>
         </div>
       </section>
+
       <section class="catalog">
-        <h2 class="catalog__title">
-          Каталог
-        </h2>
+        <div class="catalog__container">
+          <h2 class="catalog__title">
+            Каталог
+          </h2>
+          <p class="catalog__description">
+            Каталог кофейных напитков
+          </p>
+          <form class="catalog__form form" action="https://echo.htmlacademy.ru">
+            <div class="form__wrapper">
+              <fieldset class="form__fieldset price-filter">
+                <legend class="price-filter__title">Цена</legend>
+                <div class="price-filter__range range">
+                  <div class="range__scale">
+                    <div class="range__bar" style="left: 0; width: 226px">
+                      <button class="range__toggle range__toggle--min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range__toggle range__toggle--max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="price-filter__inputs">
+                  <label class="min-cost-label" aria-label="Минимальная цена" for="min-cost">
+                    <input class="price-filter__input" type="text" name="min-cost" id="min-cost" placeholder="0"
+                      required>
+                  </label>
+                  <span class="price-filter__inputs-dash"></span>
+                  <label class="max-cost-label" aria-label="Максимальная цена" for="max-cost">
+                    <input class="price-filter__input" type="text" name="max-cost" id="max-cost" value="900" required>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="form__fieldset price-filter">
+                <legend class="form__fieldset-title price-filter__title">Наличие молока</legend>
+                <ul class="price-filter__list">
+                  <li class="price-filter__item">
+                    <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
+                      id="milk-radio" checked>
+                    <label class="control control-radio active-radio" for="milk-radio">
+                      Неважно
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
+                      id="animal-milk-radio">
+                    <label class="control control-radio" for="animal-milk-radio">
+                      Только животное
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
+                      id="vegan-milk-radio">
+                    <label class="control control-radio" for="vegan-milk-radio">
+                      Только растительное
+                    </label>
+                  </li>
+                  <li class="catalog-filter-item">
+                    <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
+                      id="no-milk-radio" disabled>
+                    <label class="control control-radio" for="no-milk-radio">
+                      Без молока
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="form__fieldset price-filter">
+                <legend class="form__fieldset-title price-filter__title">Страна производитель</legend>
+                <ul class="price-filter__list">
+                  <li class="price-filter__item">
+                    <label class="price-filter__item-checkbox checkbox">
+                      <div class="checkbox__wrapper">
+                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <div class="checkbox__slider">
+                          <div class="checkbox__knob"></div>
+                        </div>
+                      </div>
+                      <span class="checkbox__label-text">
+                        Бразилия
+                      </span>
+                    </label>
+                  </li>
+                  <li class="price-filter__item">
+                    <label class="price-filter__item-checkbox checkbox">
+                      <div class="checkbox__wrapper">
+                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <div class="checkbox__slider">
+                          <div class="checkbox__knob"></div>
+                        </div>
+                      </div>
+                      <span class="checkbox__label-text">
+                        Эфиопия
+                      </span>
+                    </label>
+                  </li>
+                  <li class="price-filter__item">
+                    <label class="price-filter__item-checkbox checkbox">
+                      <div class="checkbox__wrapper">
+                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <div class="checkbox__slider">
+                          <div class="checkbox__knob"></div>
+                        </div>
+                      </div>
+                      <span class="checkbox__label-text">
+                        Колумбия
+                      </span>
+                    </label>
+                  </li>
+                  <li class="price-filter__item">
+                    <label class="price-filter__item-checkbox checkbox">
+                      <div class="checkbox__wrapper">
+                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <div class="checkbox__slider">
+                          <div class="checkbox__knob"></div>
+                        </div>
+                      </div>
+                      <span class="checkbox__label-text">
+                        Коста-Рика
+                      </span>
+                    </label>
+                  </li>
+                  <li class="price-filter__item">
+                    <label class="price-filter__item-checkbox checkbox">
+                      <div class="checkbox__wrapper">
+                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <div class="checkbox__slider">
+                          <div class="checkbox__knob"></div>
+                        </div>
+                      </div>
+                      <span class="checkbox__label-text">
+                        Перу
+                      </span>
+                    </label>
+                  </li>
+
+                </ul>
+              </fieldset>
+            </div>
+            <div class="form__buttons">
+              <button class="form__button button" type="button">Применить</button>
+              <button class="form__button button button--reset" type="button">Сбросить</button>
+
+            </div>
+          </form>
+
+          <div class="catalog__list"></div>
+        </div>
+
       </section>
+
     </main>
   </div>
   <footer class="footer">footer</footer>

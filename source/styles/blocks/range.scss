@@ -1,0 +1,52 @@
+/* Полоса "Range" и её состояния */
+.range {
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.range__scale {
+  position: relative;
+  height: 2px;
+  background-color: #e2e2e2;
+  border-radius: 2px;
+  margin: auto 0;
+}
+
+.range__bar {
+  position: absolute;
+  width: 240px;
+  height: 4px;
+  background-color: $basic-violet;
+}
+
+.range__toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: $default-white;
+  border: 2px solid $basic-violet;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range__toggle--min {
+  top: -8px;
+  left: 0;
+}
+
+.range__toggle--max {
+  top: -8px;
+  right: 0;
+}
+
+.range__toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range__toggle:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.range__toggle:active {
+  outline: 2px solid #83b3d3;
+}
