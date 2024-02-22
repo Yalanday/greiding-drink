@@ -12,13 +12,24 @@
   "title"
   "description"
   "form"
-  "products";
+  "product";
 }
 
 @media (min-width: $tablet-width) {
   .catalog__container {
     max-width: $tablet-width;
-    padding: 0 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__container {
+    max-width: $desktop-width;
+    padding: 0 40px;
+    grid-template-areas:
+    "title title"
+    "description description"
+    "form product";
+    column-gap: 29px;
   }
 }
 
@@ -50,11 +61,12 @@
   }
 }
 
-
 .catalog__form {
   grid-area: form;
+  margin-bottom: 53px;
 }
 
-.catalog__list {
-  grid-area: products;
+
+.catalog__product {
+  grid-area: product;
 }

@@ -10,6 +10,13 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .form__wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
 .form__fieldset {
   width: 280px;
   margin: 0;
@@ -20,6 +27,12 @@
 @media (min-width: $tablet-width) {
   .form__fieldset {
     width: 223px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__fieldset {
+    width: 318px;
   }
 }
 
