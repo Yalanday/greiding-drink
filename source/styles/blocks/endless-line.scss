@@ -1,0 +1,15 @@
+.endless-line {
+  position: absolute;
+  right: 0;
+  margin-right: -252px;
+  bottom: 0;
+  width: 768px;
+  height: 2px;
+  background-color: $basic-violet-ligth;
+}
+
+@media (min-width: $tablet-width) {
+  .endless-line {
+    display: none;
+  }
+}

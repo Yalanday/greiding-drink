@@ -1,3 +1,143 @@
 .footer {
   flex-shrink: 0;
 }
+
+.footer__container {
+  width: 320px;
+  padding: 22px 20px 30px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__container {
+    width: $tablet-width;
+    padding: 42px 30px 40px 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__container {
+    width: $desktop-width;
+    padding: 40px;
+    display: grid;
+    grid-template-areas:
+      "header list"
+      "bottom bottom";
+      grid-template-columns: 318px 1fr;
+      column-gap: 30px;
+  }
+}
+
+.footer__header {
+  grid-area: header;
+  position: relative;
+  padding: 0 0 22px 0;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $desktop-width) {
+  .footer__header {
+    flex-direction: column;
+    width: 318px;
+  }
+}
+
+.footer__logo-description {
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .footer__logo-description {
+    display: block;
+  }
+}
+
+.footer__list {
+  grid-area: list;
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 23px;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-bottom: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__list {
+    justify-content: space-between;
+  }
+}
+
+.footer__items {
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__items {
+    width: 223px;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+.footer__items-title {
+  margin: 0 0 25px 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2%;
+  color: $basic-violet;
+}
+
+.footer__items-list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin-bottom: 25px
+}
+
+.footer__link {
+  @include link-style;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+
+  &--lower {
+    text-transform: none;
+    display: flex;
+    align-items: start;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-right: 10px;
+  }
+
+  &--academy {
+    font-size: 12px;
+    color: #bdbdbd;
+    gap: 4px;
+  }
+}
+
+.footer__bottom {
+  grid-area: bottom;
+  display: flex;
+  justify-content: center;
+}

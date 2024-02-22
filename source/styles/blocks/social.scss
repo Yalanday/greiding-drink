@@ -1,0 +1,6 @@
+.social__list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  gap: 39px;
+}
