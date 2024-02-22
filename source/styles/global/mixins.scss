@@ -7,4 +7,5 @@
 @mixin link-style() {
   display: block;
   text-decoration: none;
+  color: inherit;
 }

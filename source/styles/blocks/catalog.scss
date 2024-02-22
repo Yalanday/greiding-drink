@@ -4,31 +4,32 @@
 
 .catalog__container {
   max-width: 320px;
-  padding: 0 20px;
+  padding: 53px 20px 0;
   margin: 0 auto;
-  border: 0.5px solid silver;
   display: grid;
   grid-template-areas:
-  "title"
-  "description"
-  "form"
-  "product";
+    "title"
+    "description"
+    "form"
+    "product";
 }
 
 @media (min-width: $tablet-width) {
   .catalog__container {
     max-width: $tablet-width;
+    padding: 83px 20px 0;
+
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog__container {
     max-width: $desktop-width;
-    padding: 0 40px;
+    padding: 103px 40px 0;
     grid-template-areas:
-    "title title"
-    "description description"
-    "form product";
+      "title title"
+      "description description"
+      "form product";
     column-gap: 29px;
   }
 }
