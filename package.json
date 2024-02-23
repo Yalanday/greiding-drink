@@ -57,5 +57,9 @@
     "stylelint": "16.2.1",
     "stylelint-config-htmlacademy": "4.1.0",
     "w3c-html-validator": "1.6.4"
+  },
+  "dependencies": {
+    "nouislider": "^15.7.1",
+    "wnumb": "^1.2.0"
   }
 }
