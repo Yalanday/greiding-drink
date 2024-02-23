@@ -1,23 +1,27 @@
+:root {
+  --app-primaryColor: #f3ebe1;
+}
+
 .hero {
   width: 100%;
-  background: linear-gradient(to bottom, $basic-bg 100%, $default-white 0);
+  background: linear-gradient(to bottom, var(--app-primaryColor) 100%, $default-white 0);
 }
 
 @media (min-width: $tablet-width) {
   .hero {
-    background: linear-gradient(to bottom, $basic-bg 75%, $default-white 25%);
+    background: linear-gradient(to bottom, var(--app-primaryColor) 75%, $default-white 25%);
   }
 }
 
 @media (min-width: $desktop-width) {
   .hero {
-    background: linear-gradient(to bottom, $basic-bg 100%, $default-white 0);
+    background: linear-gradient(to bottom, var(--app-primaryColor) 100%, $default-white 0);
   }
 }
 
 .hero__container {
   max-width: 320px;
-  padding: 20px 20px 60px;
+  padding: 20px;
   margin: 0 auto;
 }
 
