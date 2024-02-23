@@ -20,6 +20,12 @@
   background-color: $default-white;
 }
 
+.nav__list-open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: $tablet-width) {
   .nav__list {
     display: flex;
@@ -48,6 +54,7 @@
 
   &--user {
     border: none;
+    width: 60px;
   }
 }
 
@@ -98,6 +105,13 @@
 .nav-user__list {
   @include list-reset;
   display: flex;
-  gap: 2px;
   justify-content: flex-end;
+}
+
+.nav__item--botton {
+  width: 40px;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }

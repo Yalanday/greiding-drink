@@ -16,9 +16,10 @@
     content: "";
     width: 16px;
     height: 1.5px;
+    right: 0;
     background: $default-black;
-    transform: translateY(-10px);
-    box-shadow: 0 8px $default-black;
+    transform: translateY(-8px);
+    box-shadow: 0 6px $default-black;
   }
 
   &::after {
@@ -26,8 +27,9 @@
     content: "";
     width: 16px;
     height: 1.5px;
+    right: 0;
     background: $default-black;
-    transform: translateY(6px);
+    transform: translateY(4px);
   }
 }
 
@@ -38,47 +40,25 @@
 }
 
 
-// .burger-button--no-js {
-//   display: none;
-// }
+.burger-button--close {
+  height: 16px;
+  padding: 0;
 
-// .burger-button--close {
-//   height: 24px;
-//   padding: 0;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 1.5px;
+    right: 0;
+    background: $default-black;
+    box-shadow: none;
+    transform: rotate(-45deg);
+  }
 
-//   &::before {
-//     position: absolute;
-//     content: "";
-//     width: 24px;
-//     height: 24px;
-//     background: url("../../img/Burger-close.svg");
-//     background-size: 18px 18px;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     box-shadow: none;
-//     transform: translateY(-1px);
-//   }
+  &::after {
+    transform: rotate(45deg);
+  }
 
-//   &::after {
-//     display: none;
-//   }
+}
 
-//   &:focus {
-//     opacity: 0.5;
-//     outline: none;
-//   }
 
-//   &:hover {
-//     opacity: 0.5;
-//   }
-
-//   &:active {
-//     opacity: 0.2;
-//   }
-// }
-
-// @media (min-width: $tablet-width) {
-//   .burger-button {
-//     display: none;
-//   }
-// }

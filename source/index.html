@@ -53,11 +53,16 @@
                 <span class="nav__link-text">Корзина</span>
               </a>
             </li>
+            <li class="nav__item nav__item--user nav__item--botton">
+              <button class="header__toggle burger-button" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+              </button>
+            </li>
           </ul>
         </div>
-        <button class="header__toggle burger-button" type="button">
+        <!-- <button class="header__toggle burger-button" type="button">
           <span class="visually-hidden">Открыть меню</span>
-        </button>
+        </button> -->
       </div>
     </header>
     <main class="main">
@@ -151,7 +156,26 @@
             <div class="form__wrapper">
               <fieldset class="form__fieldset price-filter">
                 <legend class="price-filter__title">Цена</legend>
-                <div class="price-filter__range range">
+
+                <div class="range">
+                  <div class="range__container">
+                    <div class="range__slider">
+                      <div id="steps-slider"></div><!-- элемент слайдера диапазона -->
+                    </div>
+                  </div>
+                  <div class="range__values price-filter__inputs">
+                    <label class="min-cost-label" aria-label="Минимальная цена">
+                      <input class="price-filter__input" id="input-with-keypress-0" name="min" type="text" />
+                    </label>
+                    <span class="price-filter__inputs-dash">&nbsp;</span>
+                    <label class="max-cost-label" aria-label="Максимальная цена">
+                      <input class="price-filter__input" id="input-with-keypress-1" name="max" type="text" />
+                    </label>
+                  </div>
+                </div>
+
+
+                <!-- <div class="price-filter__range range">
                   <div class="range__scale">
                     <div class="range__bar" style="left: 0; width: 226px">
                       <button class="range__toggle range__toggle--min" type="button">
@@ -162,8 +186,8 @@
                       </button>
                     </div>
                   </div>
-                </div>
-                <div class="price-filter__inputs">
+                </div> -->
+                <!-- <div class="price-filter__inputs">
                   <label class="min-cost-label" aria-label="Минимальная цена" for="min-cost">
                     <input class="price-filter__input" type="text" name="min-cost" id="min-cost" placeholder="0"
                       required>
@@ -172,7 +196,7 @@
                   <label class="max-cost-label" aria-label="Максимальная цена" for="max-cost">
                     <input class="price-filter__input" type="text" name="max-cost" id="max-cost" value="900" required>
                   </label>
-                </div>
+                </div> -->
               </fieldset>
 
               <fieldset class="form__fieldset price-filter">
@@ -621,6 +645,10 @@
     </div>
 
   </footer>
+
+
+
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>
