@@ -1,7 +1,7 @@
 import noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
 
-const burgerButton = document.querySelector('.burger-button');
+const burgerButton = document.querySelector('.js-toggle-button');
 const nav = document.querySelector('.nav__list');
 const stepsSlider = document.getElementById('steps-slider');
 const input0 = document.getElementById('input-with-keypress-0');
@@ -92,3 +92,76 @@ inputs.forEach((input, handle) => {
     }
   });
 });
+
+// Слайдер
+const slider = document.getElementById('slider');
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
+const sliderItem = document.querySelector('.slider__item');
+const pagItems = document.querySelectorAll('.slider__pagination-item');
+let countSlider = 0;
+
+// Блокировка кнопок слайдера
+function toggleDisabledButtons() {
+  if (countSlider === 0) {
+    prev.setAttribute('disabled', 'true');
+  } else {
+    prev.removeAttribute('disabled');
+  }
+  if (countSlider === 2) {
+    next.setAttribute('disabled', 'true');
+  } else {
+    next.removeAttribute('disabled');
+  }
+}
+
+// Смена фона слайдера
+function togglerBg() {
+  if (countSlider === 0) {
+    document.documentElement.style.setProperty('--app-primaryColor', '#f3ebe1');
+  }
+  if (countSlider === 1) {
+    document.documentElement.style.setProperty('--app-primaryColor', '#eae6fc');
+  }
+  if (countSlider === 2) {
+    document.documentElement.style.setProperty('--app-primaryColor', '#e5e6e8');
+  }
+}
+
+if (countSlider === 0) {
+  pagItems[0].style.backgroundColor = '#7859cf';
+}
+
+// Смена фона пагинации
+const togglerBhPag = () => {
+  for (let i = 0; i <= 2; i++) {
+    if (i === countSlider) {
+      pagItems[i].style.backgroundColor = '#7859cf';
+    } else {
+      pagItems[i].style.backgroundColor = '#fff';
+    }
+  }
+};
+
+togglerBhPag();
+
+const createrWidth = () => sliderItem.offsetWidth;
+
+next.addEventListener('click', () => {
+  slider.scrollBy(createrWidth(), 0);
+  countSlider += 1;
+  toggleDisabledButtons();
+  togglerBg();
+  togglerBhPag();
+});
+
+prev.addEventListener('click', () => {
+  slider.scrollBy(-(createrWidth()), 0);
+  countSlider -= 1;
+  toggleDisabledButtons();
+  togglerBg();
+  togglerBhPag();
+});
+
+toggleDisabledButtons();
+

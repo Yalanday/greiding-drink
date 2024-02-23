@@ -11,7 +11,7 @@
 
 <body class="page__body">
   <div class="wrapper">
-    <header class="header">
+    <header class="header" data-test="header">
       <div class="header__container">
         <div class="header__logo">
           <a class="header__logo-link" href="#">
@@ -54,7 +54,7 @@
               </a>
             </li>
             <li class="nav__item nav__item--user nav__item--botton">
-              <button class="header__toggle burger-button" type="button">
+              <button class="header__toggle burger-button js-toggle-button" type="button">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
             </li>
@@ -69,37 +69,124 @@
       <section class="main__hero hero">
         <h2 class="hero__title visually-hidden">Галерея напитков</h2>
         <div class="hero__container">
-          <div class="hero__slider slider">
-            <picture class="slider__picture">
-              <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
-                srcset="images/flat-white-desktop@1x.webp 1x, images/flat-white-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
-                srcset="images/flat-white-tablet@1x.webp 1x, images/flat-white-tablet@2x.webp 2x">
-              <source type="image/webp"
-                srcset="images/flat-white-mobile@1x.webp 1x, images/flat-white-mobile@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
-                srcset="images/flat-white-desktop@1x.png">
-              <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
-                srcset="images/flat-white-tablet@1x.png, images/flat-white-tablet@2x.png 2x">
-              <img class="slider__image" width="280" height="280" src="images/flat-white-mobile@1x.png"
-                srcset="images/flat-white-mobile@2x.png 2x" alt="Напиток Декаф Флет.">
-            </picture>
-            <span class="slider__badge">Новинка!</span>
-            <h3 class="slider__title">Декаф Флэт Уайт</h3>
-            <p class="slider__description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным
-              фермерским&nbsp;молоком —
-              то, что нужно для&nbsp;расслабления после тяжёлого&nbsp;рабочего&nbsp;дня</p>
-            <div class="slider__buy buy">
-              <div class="buy__container">
-                <span class="buy__old-price">295₽</span>
-                <span class="buy__price">225₽</span>
+
+          <div class="gallery">
+
+            <div id="slider-wrapper">
+              <div id="slider">
+                <div id="content">
+                  <div class="slider__item">
+
+                    <div class="hero__slider slider">
+                      <picture class="slider__picture">
+                        <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
+                          srcset="images/flat-white-desktop@1x.webp 1x, images/flat-white-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
+                          srcset="images/flat-white-tablet@1x.webp 1x, images/flat-white-tablet@2x.webp 2x">
+                        <source type="image/webp"
+                          srcset="images/flat-white-mobile@1x.webp 1x, images/flat-white-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
+                          srcset="images/flat-white-desktop@1x.png">
+                        <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
+                          srcset="images/flat-white-tablet@1x.png, images/flat-white-tablet@2x.png 2x">
+                        <img class="slider__image" width="280" height="280" src="images/flat-white-mobile@1x.png"
+                          srcset="images/flat-white-mobile@2x.png 2x" alt="Напиток Декаф Флет.">
+                      </picture>
+                      <span class="slider__badge">Новинка!</span>
+                      <h3 class="slider__title">Декаф Флэт Уайт</h3>
+                      <p class="slider__description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным
+                        фермерским&nbsp;молоком —
+                        то, что нужно для&nbsp;расслабления после тяжёлого&nbsp;рабочего&nbsp;дня</p>
+                      <div class="slider__buy buy">
+                        <div class="buy__container">
+                          <span class="buy__old-price">295₽</span>
+                          <span class="buy__price">225₽</span>
+                        </div>
+                        <button class="buy__button button" type="button">Заказать</button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="slider__item">
+                    <div class="hero__slider slider">
+                      <picture class="slider__picture">
+                        <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
+                          srcset="images/lavanda-desktop@1x.webp 1x, images/lavanda-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
+                          srcset="images/lavanda-tablet@1x.webp 1x, images/lavanda-tablet@2x.webp 2x">
+                        <source type="image/webp"
+                          srcset="images/lavanda-mobile@1x.webp 1x, images/lavanda-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
+                          srcset="images/lavanda-desktop@1x.png">
+                        <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
+                          srcset="images/lavanda-tablet@1x.png, images/lavanda-tablet@2x.png 2x">
+                        <img class="slider__image" width="280" height="280" src="images/lavanda-mobile@1x.png"
+                          srcset="images/lavanda-mobile@2x.png 2x" alt="Напиток Декаф Флет.">
+                      </picture>
+                      <span class="slider__badge">Новинка!</span>
+                      <h3 class="slider__title">Лавандавый Латте</h3>
+                      <p class="slider__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
+                        эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                      <div class="slider__buy buy">
+                        <div class="buy__container">
+                          <span class="buy__old-price">295₽</span>
+                          <span class="buy__price">225₽</span>
+                        </div>
+                        <button class="buy__button button" type="button">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider__item">
+                    <div class="hero__slider slider">
+                      <picture class="slider__picture">
+                        <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
+                          srcset="images/espresso-desktop@1x.webp 1x, images/espresso-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
+                          srcset="images/espresso-tablet@1x.webp 1x, images/espresso-tablet@2x.webp 2x">
+                        <source type="image/webp"
+                          srcset="images/espresso-mobile@1x.webp 1x, images/espresso-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
+                          srcset="images/espresso-desktop@1x.png">
+                        <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
+                          srcset="images/espresso-tablet@1x.png, images/espresso-tablet@2x.png 2x">
+                        <img class="slider__image" width="280" height="280" src="images/espresso-mobile@1x.png"
+                          srcset="images/espresso-mobile@2x.png 2x" alt="Напиток Декаф Флет.">
+                      </picture>
+                      <span class="slider__badge">Новинка!</span>
+                      <h3 class="slider__title">Тройной Эспрессо</h3>
+                      <p class="slider__description">Невероятное сочетание перуанской высокогорной арабики с молоком
+                        ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                      <div class="slider__buy buy">
+                        <div class="buy__container">
+                          <span class="buy__old-price">295₽</span>
+                          <span class="buy__price">225₽</span>
+                        </div>
+                        <button class="buy__button button" type="button">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <button class="buy__button button" type="button">Заказать</button>
+              <button type="button" id="prev">
+                <span class="prev-img">&nbsp;</span>
+              </button>
+              <button type="button" id="next">
+                <span class="prev-img">&nbsp;</span>
+              </button>
+              <div class="slider__pagination">
+                <ul class="slider__pagination-list">
+                  <li class="slider__pagination-item">&nbsp;</li>
+                  <li class="slider__pagination-item">&nbsp;</li>
+                  <li class="slider__pagination-item">&nbsp;</li>
+                </ul>
+              </div>
             </div>
           </div>
+
+
         </div>
       </section>
-      <section class="features">
+      <section class="features" data-test="features">
         <div class="features__container">
           <h2 class="features__title">
             Преимущества
@@ -144,7 +231,7 @@
         </div>
       </section>
 
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <div class="catalog__container">
           <h2 class="catalog__title">
             Каталог
@@ -502,7 +589,7 @@
 
       </section>
 
-      <section class="map">
+      <section class="map" data-test="map">
         <h2 class="map__titile visually-hidden">Карта</h2>
         <div class="map__contetn">
           <span class="map__pin">
@@ -517,7 +604,7 @@
     </main>
 
   </div>
-  <footer class="footer">
+  <footer class="footer" data-test="footer">
     <div class="footer__container">
       <div class="footer__header">
         <div class="footer__logo">
@@ -634,7 +721,8 @@
         </li>
       </ul>
       <div class="footer__bottom">
-        <a class="footer__link footer__link--lower footer__link--academy" href="#">
+        <a class="footer__link footer__link--lower footer__link--academy"
+          href="https://htmlacademy.ru/intensive/adaptive" rel="noopener noreferrer" target="_blank">
           <span>Разработано в HTML Academy</span>
           <svg class="footer__link-icon" width="13" height="16">
             <use href="images/icons/stack.svg#logo-academy" xmlns="http://www.w3.org/2000/svg">
@@ -645,8 +733,6 @@
     </div>
 
   </footer>
-
-
 
   <script src="scripts/index.js"></script>
 </body>

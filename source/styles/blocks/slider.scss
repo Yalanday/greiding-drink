@@ -37,17 +37,12 @@
   }
 }
 
-
-
 .slider__picture {
   grid-area: picture;
-}
 
-.slider__picture {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px;
 }
-
 
 .slider__badge {
   grid-area: badge;
@@ -70,7 +65,7 @@
 
 .slider__title {
   grid-area: title;
-  margin: 0;
+  margin: 0 0 15px 0;
   font-size: $font-big;
   line-height: 48px;
   font-weight: 700;
@@ -96,7 +91,8 @@
 
 .slider__description {
   grid-area: description;
-  margin: 0;
+  min-height: 100px;
+  margin: 0 0 20px 0;
   color: $dark-color;
   font-size: $font-small;
   line-height: 20px;
@@ -123,6 +119,7 @@
 .slider__buy {
   grid-area: buy;
   align-items: center;
+  margin-top: auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -137,4 +134,120 @@
     margin-left: 0;
     margin-top: -50px;
   }
+}
+
+#slider-wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  #slider-wrapper {
+    width: $tablet-width - 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  #slider-wrapper {
+    width: $desktop-width - 80px;
+  }
+}
+
+#slider {
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+#slider::-webkit-scrollbar {
+  height: 0;
+}
+
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev {
+  top: 45%;
+  left: 15px;
+
+  transform: translate(-142%, 48%);
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: auto;
+  }
+}
+
+.prev-img {
+  display: block;
+  width: 11px;
+  height: 20px;
+  background-image: url("../../images/icons/slider-arrow.svg");
+  background-size: cover;
+}
+
+#next {
+  top: 45%;
+  right: -60px;
+  transform: translate(-147%, 47%) rotate(180deg);
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: auto;
+  }
+}
+
+#content {
+  display: grid;
+  grid-auto-flow: column;
+  box-sizing: border-box;
+}
+
+.slider__item {
+  width: 280px;
+  min-height: 600px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__item {
+    width: 728px;
+    min-height: 828px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__item {
+    width: $desktop-width - 80px;
+    min-height: 714px;
+  }
+}
+
+.slider__pagination {
+  position: absolute;
+  display: inline-block;
+  left: 580px;
+  bottom: 70px
+}
+
+.slider__pagination-list {
+  @include list-reset;
+  display: flex;
+  gap: 8px;
+}
+
+.slider__pagination-item {
+  width: 62px;
+  height: 4px;
+  background-color: white;
 }
