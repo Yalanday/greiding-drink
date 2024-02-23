@@ -39,6 +39,10 @@
   align-items: center;
 }
 
+.header__logo {
+  pointer-events: none;
+}
+
 .header__logo-description {
   display: none;
   width: 150px;
