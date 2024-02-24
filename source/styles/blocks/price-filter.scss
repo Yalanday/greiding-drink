@@ -27,6 +27,7 @@
   padding: 8px 10px 8px 10px;
   border: 2px solid $basic-violet;
   border-radius: 4px;
+
 }
 
 @media (min-width: $tablet-width) {
@@ -36,7 +37,7 @@
 }
 
 .price-filter__input::placeholder {
-  color: #bdbdbd;
+  color: $light-grey-b;
 }
 
 .price-filter__inputs-dash {

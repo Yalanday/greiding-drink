@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #f8f8f8;
-  padding: 0 7px 0 4px;
+  padding: 0 0 0 4px;
   margin-left: auto;
   margin-bottom: 16px;
 }
@@ -18,10 +18,11 @@
 }
 
 .select__field {
-  max-width: 150px;
+  appearance: none;
+  max-width: 165px;
+  background-color: none;
   border: 0;
   outline: 0;
-  background: none;
   color: inherit;
   box-shadow: none;
   font-family: inherit;
@@ -31,8 +32,19 @@
   line-height: 24px;
   flex: 1;
   cursor: pointer;
+
 }
 
 option {
   padding: 0 20px
 }
+
+.select-wrapper:hover {
+  background-color: aqua;
+}
+
+.select-wrapper {
+  padding: 4px 7px;
+}
+
+

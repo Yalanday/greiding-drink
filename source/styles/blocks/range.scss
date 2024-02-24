@@ -26,27 +26,33 @@
   color: inherit;
 }
 
-.range__values input:nth-child(1) {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  --moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  --moz-appearance: number-input;
+}
+
+.range__values input {
   border: 2px solid $basic-violet;
-}
-
-.range__values input:nth-child(2) {
-  background: $basic-violet;
-}
-
-.range__values input:focus {
-  outline: none;
-}
-
-.noUi-target {
-  border: none;
-  background: none;
 }
 
 .noUi-handle {
   border: none;
   border-radius: 50%;
 }
+
+
+
+
 
 .noUi-handle:before,
 .noUi-handle:after {
@@ -57,23 +63,26 @@
 .noUi-handle-upper {
   background: $default-white;
   border: 2px solid $basic-violet;
+  outline: none;
 
   &:hover {
     background:
-       radial-gradient(rgba(120, 89, 207, 0.25) 7px, $default-white 2px),
-       radial-gradient($default-white, $default-white);
+      radial-gradient(rgba(120, 89, 207, 0.25) 7px, $default-white 2px),
+      radial-gradient($default-white, $default-white);
   }
 
   &:focus {
     background:
-       radial-gradient(rgba(120, 89, 207, 0.25) 7px, $default-white 2px),
-       radial-gradient($default-white, $default-white);
+      radial-gradient(rgba(120, 89, 207, 0.25) 7px, $default-white 2px),
+      radial-gradient($default-white, $default-white);
+    outline: none;
+
   }
 
   &:active {
     background:
-       radial-gradient($basic-violet 7px, $default-white 2px),
-       radial-gradient($default-white, $default-white);
+      radial-gradient($basic-violet 7px, $default-white 2px),
+      radial-gradient($default-white, $default-white);
   }
 }
 
@@ -108,4 +117,28 @@
 .noUi-base {
   background-color: $catalog-bg;
   height: 1px;
+}
+
+
+
+.noUi-handle {
+  border: none;
+  border-radius: 50%;
+  background: orange;
+  cursor: pointer;
+
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .6);
+
+  &:focus {
+    outline: none
+  }
+}
+
+.noUi-touch-area:focus {
+  outline: none !important
+}
+
+.noUi-handle.noUi-handle-lower::before,
+.noUi-handle.noUi-handle-upper::before {
+  background: red; display: none
 }
