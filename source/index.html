@@ -26,7 +26,7 @@
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">Главная</a>
+              <a class="nav__link nav__link--current" href="#">Главная</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Каталог</a>
@@ -43,26 +43,29 @@
           <ul class="nav-user__list">
             <li class="nav__item nav__item--user">
               <a class="nav__link" href="#">
-                <img src="images/icons/user-icon.svg" width="16" height="16" alt="Иконка пользователя">
+                <svg class="nav__link-icon" width="16" height="16">
+                  <use href="images/icons/stack.svg#user-icon" xmlns="http://www.w3.org/2000/svg">
+                  </use>
+                </svg>
                 <span class="nav__link-text">Войти</span>
               </a>
             </li>
             <li class="nav__item nav__item--user">
               <a class="nav__link" href="#">
-                <img src="images/icons/basket-icon.svg" width="16" height="16" alt="Корзина">
+                <svg class="nav__link-icon" width="16" height="16">
+                  <use href="images/icons/stack.svg#basket-icon" xmlns="http://www.w3.org/2000/svg">
+                  </use>
+                </svg>
                 <span class="nav__link-text">Корзина</span>
               </a>
             </li>
-            <li class="nav__item nav__item--user nav__item--botton">
+            <li class="nav__item nav__item--user nav__item--botton" tabindex="0">
               <button class="header__toggle burger-button js-toggle-button" type="button">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
             </li>
           </ul>
         </div>
-        <!-- <button class="header__toggle burger-button" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button> -->
       </div>
     </header>
     <main class="main">
@@ -695,7 +698,7 @@
               </a>
             </li>
             <li class="footer__items-item">
-              <a class="footer__link footer__link--lower" href="#">
+              <a class="footer__link footer__link--lower" href="tel:+79999999999">
                 <svg class="footer__link-icon" width="13" height="16">
                   <use href="images/icons/stack.svg#phone" xmlns="http://www.w3.org/2000/svg">
                   </use>

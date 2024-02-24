@@ -73,6 +73,13 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .pagination__link-icon {
+    display: none;
+  }
+}
+
+
 .pagination__link:hover .pagination__link-icon,
 .pagination__link:focus .pagination__link-icon {
   fill: $default-white;

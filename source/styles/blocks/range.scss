@@ -5,10 +5,14 @@
 }
 
 .range {
-  // padding: 48px 0;
   width: 280px;
-  // padding-right: 20px;
   margin-bottom: 34px;
+}
+
+@media (min-width: $tablet-width) {
+  .range {
+    width: 223px;
+  }
 }
 
 .range__slider {
@@ -50,10 +54,6 @@ input[type="number"]:focus {
   border-radius: 50%;
 }
 
-
-
-
-
 .noUi-handle:before,
 .noUi-handle:after {
   display: none;
@@ -62,18 +62,18 @@ input[type="number"]:focus {
 .noUi-handle-lower,
 .noUi-handle-upper {
   background: $default-white;
-  border: 2px solid $basic-violet;
+  border: 2px solid $basic-violet-hover;
   outline: none;
 
   &:hover {
     background:
-      radial-gradient(rgba(120, 89, 207, 0.25) 7px, $default-white 2px),
+      radial-gradient(rgba(120, 89, 207, 0.25) 8px, $default-white 2px),
       radial-gradient($default-white, $default-white);
   }
 
   &:focus {
     background:
-      radial-gradient(rgba(120, 89, 207, 0.25) 7px, $default-white 2px),
+      radial-gradient(rgba(120, 89, 207, 0.25) 8px, $default-white 2px),
       radial-gradient($default-white, $default-white);
     outline: none;
 
@@ -81,8 +81,9 @@ input[type="number"]:focus {
 
   &:active {
     background:
-      radial-gradient($basic-violet 7px, $default-white 2px),
+      radial-gradient($basic-violet-active 8px, $default-white 2px),
       radial-gradient($default-white, $default-white);
+      border-color: $basic-violet;
   }
 }
 
@@ -104,9 +105,9 @@ input[type="number"]:focus {
 }
 
 .noUi-horizontal .noUi-handle {
-  width: 20px;
-  height: 20px;
-  top: -8px;
+  width: 24px;
+  height: 24px;
+  top: -10px;
   right: -2px;
 }
 
@@ -119,26 +120,24 @@ input[type="number"]:focus {
   height: 1px;
 }
 
-
+#steps-slider {
+  border: none;
+}
 
 .noUi-handle {
-  border: none;
   border-radius: 50%;
-  background: orange;
   cursor: pointer;
-
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .6);
 
   &:focus {
     outline: none
   }
 }
 
-.noUi-touch-area:focus {
-  outline: none !important
-}
+// .noUi-touch-area:focus {
+// }
 
-.noUi-handle.noUi-handle-lower::before,
-.noUi-handle.noUi-handle-upper::before {
-  background: red; display: none
-}
+// .noUi-handle.noUi-handle-lower::before,
+// .noUi-handle.noUi-handle-upper::before {
+//   background: red;
+//   display: none
+// }
