@@ -4,3 +4,40 @@
   align-items: center;
   gap: 39px;
 }
+
+
+.social__link-icon {
+  fill: $light-grey-b;
+  border-radius: 4px;
+
+  &--pin {
+    border-radius: 50%;
+  }
+}
+
+.social__link {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #F0EBFF;
+  }
+
+  &:focus {
+    background-color: #F0EBFF;
+    outline: none;
+  }
+
+  &:active {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+}
+
+.social__link:focus .social__link-icon,
+.social__link:hover .social__link-icon {
+  fill: $basic-violet;
+}

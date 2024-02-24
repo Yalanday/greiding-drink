@@ -1,56 +1,3 @@
-// /* Полоса "Range" и её состояния */
-// .range {
-//   width: 100%;
-//   margin-bottom: 34px;
-// }
-
-// .range__scale {
-//   position: relative;
-//   height: 2px;
-//   background-color: #e2e2e2;
-//   border-radius: 2px;
-//   margin: auto 0;
-// }
-
-// .range__bar {
-//   position: absolute;
-//   width: 240px;
-//   height: 4px;
-//   background-color: $basic-violet;
-// }
-
-// .range__toggle {
-//   position: absolute;
-//   width: 20px;
-//   height: 20px;
-//   background: $default-white;
-//   border: 2px solid $basic-violet;
-//   border-radius: 50%;
-//   cursor: pointer;
-// }
-
-// .range__toggle--min {
-//   top: -8px;
-//   left: 0;
-// }
-
-// .range__toggle--max {
-//   top: -8px;
-//   right: 0;
-// }
-
-// .range__toggle:hover {
-//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-// }
-
-// .range__toggle:focus {
-//   outline: 3px solid #83b3d3;
-// }
-
-// .range__toggle:active {
-//   outline: 2px solid #83b3d3;
-// }
-
 .range__container {
   max-width: 720px;
   margin: 0 auto;
@@ -106,14 +53,28 @@
   display: none;
 }
 
-.noUi-handle-lower {
-  background: $default-white;
-  border: 2px solid $basic-violet;
-}
-
+.noUi-handle-lower,
 .noUi-handle-upper {
   background: $default-white;
   border: 2px solid $basic-violet;
+
+  &:hover {
+    background:
+       radial-gradient(rgba(120, 89, 207, 0.25) 7px, $default-white 2px),
+       radial-gradient($default-white, $default-white);
+  }
+
+  &:focus {
+    background:
+       radial-gradient(rgba(120, 89, 207, 0.25) 7px, $default-white 2px),
+       radial-gradient($default-white, $default-white);
+  }
+
+  &:active {
+    background:
+       radial-gradient($basic-violet 7px, $default-white 2px),
+       radial-gradient($default-white, $default-white);
+  }
 }
 
 .noUi-horizontal {
@@ -122,12 +83,10 @@
 }
 
 .noUi-connects {
-  background: linear-gradient(
-    to bottom,
-    $catalog-bg 25%,
-    $light-grey-a 25% 75%,
-    $catalog-bg 75%
-  );
+  background: linear-gradient(to bottom,
+      $catalog-bg 25%,
+      $light-grey-a 25% 75%,
+      $catalog-bg 75%);
   height: 4px;
 }
 
