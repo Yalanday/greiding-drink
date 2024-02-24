@@ -30,9 +30,33 @@
   justify-content: center;
   width: 40px;
   height: 40px;
+  border: none;
   border-radius: 4px;
   background-color: $default-white;
   text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $basic-violet-hover;
+    color: $default-white;
+  }
+
+  &:focus {
+    background-color: $basic-violet-hover;
+    color: $default-white;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $basic-violet-active;
+    color: $default-white;
+  }
+
+  &:disabled {
+    background-color: $light-grey-a;
+    color: $default-white;
+  }
 
   &--current {
     background: none;
@@ -40,6 +64,20 @@
     font-weight: 600;
   }
 }
+
+.pagination__link-icon {
+  fill: $basic-violet;
+
+  &--reverse {
+    transform: rotate(180deg);
+  }
+}
+
+.pagination__link:hover .pagination__link-icon,
+.pagination__link:focus .pagination__link-icon {
+  fill: $default-white;
+}
+
 
 .pagination__link-text {
   display: none;
@@ -49,20 +87,6 @@
   .pagination__link-text {
     display: block;
   }
-}
-
-.pagination__link-prev::after,
-.pagination__link-next::after  {
-  content: "";
-  width: 6px;
-  height: 10px;
-  background-image: url("../../images/icons/pag-direction.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pagination__link-next::after {
-  transform: rotate(180deg);
 }
 
 @media (min-width: $tablet-width) {

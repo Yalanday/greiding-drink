@@ -174,11 +174,11 @@
                 <span class="prev-img">&nbsp;</span>
               </button>
               <div class="slider__pagination">
-                <ul class="slider__pagination-list">
-                  <li class="slider__pagination-item">&nbsp;</li>
-                  <li class="slider__pagination-item">&nbsp;</li>
-                  <li class="slider__pagination-item">&nbsp;</li>
-                </ul>
+                <div class="slider__pagination-list">
+                  <button class="slider__pagination-item" type="button">&nbsp;</button>
+                  <button class="slider__pagination-item" type="button">&nbsp;</button>
+                  <button class="slider__pagination-item" type="button">&nbsp;</button>
+                </div>
               </div>
             </div>
           </div>
@@ -260,30 +260,6 @@
                     </label>
                   </div>
                 </div>
-
-
-                <!-- <div class="price-filter__range range">
-                  <div class="range__scale">
-                    <div class="range__bar" style="left: 0; width: 226px">
-                      <button class="range__toggle range__toggle--min" type="button">
-                        <span class="visually-hidden">Изменить минимальную цену.</span>
-                      </button>
-                      <button class="range__toggle range__toggle--max" type="button">
-                        <span class="visually-hidden">Изменить максимальную цену.</span>
-                      </button>
-                    </div>
-                  </div>
-                </div> -->
-                <!-- <div class="price-filter__inputs">
-                  <label class="min-cost-label" aria-label="Минимальная цена" for="min-cost">
-                    <input class="price-filter__input" type="text" name="min-cost" id="min-cost" placeholder="0"
-                      required>
-                  </label>
-                  <span class="price-filter__inputs-dash"></span>
-                  <label class="max-cost-label" aria-label="Максимальная цена" for="max-cost">
-                    <input class="price-filter__input" type="text" name="max-cost" id="max-cost" value="900" required>
-                  </label>
-                </div> -->
               </fieldset>
 
               <fieldset class="form__fieldset price-filter">
@@ -323,23 +299,24 @@
               <fieldset class="form__fieldset price-filter">
                 <legend class="form__fieldset-title price-filter__title">Страна производитель</legend>
                 <ul class="price-filter__list">
-                  <li class="price-filter__item">
-                    <label class="price-filter__item-checkbox checkbox">
+                  <li class="price-filter__item" >
+                    <label class="price-filter__item-checkbox checkbox" for="brazil" tabindex="0">
                       <div class="checkbox__wrapper">
-                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <input class="checkbox__input" type="checkbox" id="brazil" name="brazil" checked>
                         <div class="checkbox__slider">
                           <div class="checkbox__knob"></div>
                         </div>
                       </div>
-                      <span class="checkbox__label-text">
-                        Бразилия
-                      </span>
+
+                        <span class="checkbox__label-text">
+                          Бразилия
+                        </span>
                     </label>
                   </li>
                   <li class="price-filter__item">
-                    <label class="price-filter__item-checkbox checkbox">
+                    <label class="price-filter__item-checkbox checkbox" for="efiopy" tabindex="-1">
                       <div class="checkbox__wrapper">
-                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <input class="checkbox__input" type="checkbox" id="efiopy" name="efiopy">
                         <div class="checkbox__slider">
                           <div class="checkbox__knob"></div>
                         </div>
@@ -350,9 +327,9 @@
                     </label>
                   </li>
                   <li class="price-filter__item">
-                    <label class="price-filter__item-checkbox checkbox">
+                    <label class="price-filter__item-checkbox checkbox" for="columbia" tabindex="-1">
                       <div class="checkbox__wrapper">
-                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <input class="checkbox__input" type="checkbox" id="columbia" name="columbia">
                         <div class="checkbox__slider">
                           <div class="checkbox__knob"></div>
                         </div>
@@ -363,9 +340,9 @@
                     </label>
                   </li>
                   <li class="price-filter__item">
-                    <label class="price-filter__item-checkbox checkbox">
+                    <label class="price-filter__item-checkbox checkbox" for="costa-rica">
                       <div class="checkbox__wrapper">
-                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <input class="checkbox__input" type="checkbox" id="costa-rica" name="costa-rica">
                         <div class="checkbox__slider">
                           <div class="checkbox__knob"></div>
                         </div>
@@ -376,9 +353,9 @@
                     </label>
                   </li>
                   <li class="price-filter__item">
-                    <label class="price-filter__item-checkbox checkbox">
+                    <label class="price-filter__item-checkbox checkbox" for="peru">
                       <div class="checkbox__wrapper">
-                        <input class="checkbox__input" type="checkbox" name="coffe-country">
+                        <input class="checkbox__input" type="checkbox" id="peru" name="peru">
                         <div class="checkbox__slider">
                           <div class="checkbox__knob"></div>
                         </div>
@@ -553,33 +530,39 @@
             <div class="product__pagination pagination">
               <ul class="pagination__list ">
                 <li class="pagination__item">
-                  <a class="pagination__link pagination__link-prev pagination__link--large" href="#">
+                  <button class="pagination__link pagination__link-prev pagination__link--large" type="button">
+                    <svg class="pagination__link-icon" width="6" height="10">
+                      <use href="images/icons/stack.svg#pag-direction" xmlns="http://www.w3.org/2000/svg"></use>
+                    </svg>
                     <span class="pagination__link-text">
                       Назад
                     </span>
-                  </a>
+                  </button>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#">
+                  <button class="pagination__link" type="button">
                     1
-                  </a>
+                  </button>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link pagination__link--current" href="#">
+                  <button class="pagination__link pagination__link--current" type="button">
                     2
-                  </a>
+                  </button>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link" href="#">
+                  <button class="pagination__link" type="button">
                     3
-                  </a>
+                  </button>
                 </li>
                 <li class="pagination__item">
-                  <a class="pagination__link pagination__link-next pagination__link--large" href="#">
+                  <button class="pagination__link pagination__link-next pagination__link--large" type="button">
+                    <svg class="pagination__link-icon pagination__link-icon--reverse" width="6" height="10">
+                      <use href="images/icons/stack.svg#pag-direction" xmlns="http://www.w3.org/2000/svg"></use>
+                    </svg>
                     <span class="pagination__link-text">
                       Вперёд
                     </span>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -621,7 +604,7 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <span class="visually-hidden">В контакте</span>
-              <svg class="main-footer__link-icon" width="20" height="20">
+              <svg class="social__link-icon" width="20" height="20">
                 <use href="images/icons/stack.svg#vk" xmlns="http://www.w3.org/2000/svg"></use>
               </svg>
             </a>
@@ -629,7 +612,7 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <span class="visually-hidden">Пинтерест</span>
-              <svg class="main-footer__link-icon" width="20" height="20">
+              <svg class="social__link-icon social__link-icon--pin" width="20" height="20">
                 <use href="images/icons/stack.svg#pinterest" xmlns="http://www.w3.org/2000/svg"></use>
               </svg>
             </a>
@@ -637,7 +620,7 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <span class="visually-hidden">Одноклассники</span>
-              <svg class="main-footer__link-icon" width="20" height="20">
+              <svg class="social__link-icon" width="20" height="20">
                 <use href="images/icons/stack.svg#ok" xmlns="http://www.w3.org/2000/svg"></use>
               </svg>
             </a>
@@ -724,7 +707,7 @@
         <a class="footer__link footer__link--lower footer__link--academy"
           href="https://htmlacademy.ru/intensive/adaptive" rel="noopener noreferrer" target="_blank">
           <span>Разработано в HTML Academy</span>
-          <svg class="footer__link-icon" width="13" height="16">
+          <svg class="footer__link-icon footer__link-icon--academy" width="9" height="12">
             <use href="images/icons/stack.svg#logo-academy" xmlns="http://www.w3.org/2000/svg">
             </use>
           </svg>

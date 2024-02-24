@@ -1,17 +1,10 @@
 import noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
 
-const burgerButton = document.querySelector('.js-toggle-button');
-const nav = document.querySelector('.nav__list');
 const stepsSlider = document.getElementById('steps-slider');
 const input0 = document.getElementById('input-with-keypress-0');
 const input1 = document.getElementById('input-with-keypress-1');
 const inputs = [input0, input1];
-
-burgerButton.onclick = function () {
-  nav.classList.toggle('nav__list-open');
-  burgerButton.classList.toggle('burger-button--close');
-};
 
 noUiSlider.create(stepsSlider, {
   start: [0, 900],
@@ -42,64 +35,56 @@ inputs.forEach((input, handle) => {
     const values = stepsSlider.noUiSlider.get();
     const value = Number(values[handle]);
 
-    // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
     const steps = stepsSlider.noUiSlider.steps();
-
-    // [down, up]
     const step = steps[handle];
 
     let position;
 
-    // 13 is enter,
-    // 38 is key up,
-    // 40 is key down.
     switch (e.which) {
-
       case 13:
         stepsSlider.noUiSlider.setHandle(handle, this.value);
         break;
-
       case 38:
-
-        // Get step to go increase slider value (up)
         position = step[1];
-
-        // false = no step is set
         if (position === false) {
           position = 1;
         }
-
-        // null = edge of slider
         if (position !== null) {
           stepsSlider.noUiSlider.setHandle(handle, value + position);
         }
-
         break;
-
       case 40:
-
         position = step[0];
-
         if (position === false) {
           position = 1;
         }
-
         if (position !== null) {
           stepsSlider.noUiSlider.setHandle(handle, value - position);
         }
-
         break;
     }
   });
 });
 
-// Слайдер
+
+const burgerButton = document.querySelector('.js-toggle-button');
+const nav = document.querySelector('.nav__list');
+
+burgerButton.onclick = function () {
+  nav.classList.toggle('nav__list-open');
+  burgerButton.classList.toggle('burger-button--close');
+};
+
+
+// Слайдер карточек
 const slider = document.getElementById('slider');
 const next = document.getElementById('next');
 const prev = document.getElementById('prev');
-const sliderItem = document.querySelector('.slider__item');
+const sliderItems = document.querySelector('.slider__item');
 const pagItems = document.querySelectorAll('.slider__pagination-item');
 let countSlider = 0;
+
+const createrWidth = () => sliderItems.offsetWidth;
 
 // Блокировка кнопок слайдера
 function toggleDisabledButtons() {
@@ -128,26 +113,69 @@ function togglerBg() {
   }
 }
 
-if (countSlider === 0) {
-  pagItems[0].style.backgroundColor = '#7859cf';
-}
-
 // Смена фона пагинации
 const togglerBhPag = () => {
   for (let i = 0; i <= 2; i++) {
     if (i === countSlider) {
       pagItems[i].style.backgroundColor = '#7859cf';
     } else {
-      pagItems[i].style.backgroundColor = '#fff';
+      pagItems[i].style.backgroundColor = '#ffffff';
     }
   }
 };
 
-togglerBhPag();
+function startSliderScripts() {
+  toggleDisabledButtons();
+  togglerBg();
+  togglerBhPag();
+}
 
-const createrWidth = () => sliderItem.offsetWidth;
+// Cмена фона при событиях
+pagItems.forEach((pagItem) => {
+  pagItem.addEventListener('mouseover', (e) => {
+    togglerBhPag();
+    e.target.style.backgroundColor = 'rgba(120, 89, 207, 0.25)';
+  });
+  pagItem.addEventListener('mousedown', (e) => {
+    e.target.style.backgroundColor = '#7859cf';
+  });
+  pagItem.addEventListener('mouseup', (e) => {
+    e.target.style.backgroundColor = 'rgba(120, 89, 207, 0.25)';
+  });
+  pagItem.addEventListener('mouseout', () => {
+    togglerBhPag();
+  });
+});
 
+// Переключния по кнопкам пагинации
+pagItems.forEach((pagItem, index) => {
+  pagItem.addEventListener('click', () => {
+    if ((index === 1 && countSlider === 0) || (index === 2 && countSlider === 1)) {
+      slider.scrollBy(createrWidth(), 0);
+      countSlider += 1;
+      startSliderScripts();
+    }
+    if ((index === 0 && countSlider === 1) || (index === 1 && countSlider === 2)) {
+      slider.scrollBy(-(createrWidth()), 0);
+      countSlider -= 1;
+      startSliderScripts();
+    }
+    if (index === 0 && countSlider === 2) {
+      slider.scrollBy(-(2 * createrWidth()), 0);
+      countSlider -= 2;
+      startSliderScripts();
+    }
+    if (index === 2 && countSlider === 0) {
+      slider.scrollBy(2 * createrWidth(), 0);
+      countSlider += 2;
+      startSliderScripts();
+    }
+  });
+});
+
+//Переключние слайдера
 next.addEventListener('click', () => {
+  // debugger;
   slider.scrollBy(createrWidth(), 0);
   countSlider += 1;
   toggleDisabledButtons();
@@ -161,7 +189,8 @@ prev.addEventListener('click', () => {
   toggleDisabledButtons();
   togglerBg();
   togglerBhPag();
+
 });
 
-toggleDisabledButtons();
+startSliderScripts();
 

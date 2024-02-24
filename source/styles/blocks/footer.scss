@@ -23,8 +23,8 @@
     grid-template-areas:
       "header list"
       "bottom bottom";
-      grid-template-columns: 318px 1fr;
-      column-gap: 30px;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
   }
 }
 
@@ -117,6 +117,7 @@
   line-height: 16px;
   letter-spacing: 2%;
   text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
 
   &--lower {
     text-transform: none;
@@ -130,10 +131,43 @@
   }
 
   &--academy {
+    align-items: center;
     font-size: 12px;
     color: #bdbdbd;
     gap: 4px;
   }
+
+  &:hover {
+    color: $basic-violet-hover;
+  }
+
+  &:focus {
+    color: $basic-violet-hover;
+    outline: none;
+  }
+
+  &:active {
+    color: $basic-violet-active;
+  }
+}
+
+.footer__link-icon {
+  fill: $basic-violet;
+  transition: fill 0.3s ease-in-out;
+}
+
+.footer__link:hover .footer__link-icon,
+.footer__link:focus .footer__link-icon {
+  fill: $basic-violet-hover;
+}
+
+.footer__link:active .footer__link-icon {
+  fill: $basic-violet-active;
+}
+
+.footer__link-icon--academy {
+  margin-top: 4px;
+fill: $light-grey-b;
 }
 
 .footer__bottom {

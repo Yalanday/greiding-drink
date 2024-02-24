@@ -1,13 +1,16 @@
 .nav {
   position: absolute;
   top: 100%;
-  width: 100%
+  width: 100%;
+  z-index: 1;
+
 }
 
 @media (min-width: $tablet-width) {
   .nav {
     position: relative;
     margin: 0 auto;
+    z-index: 0;
   }
 }
 
@@ -38,7 +41,6 @@
     opacity: 1;
   }
 }
-
 
 .nav__list-open {
   display: flex;
@@ -87,7 +89,6 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .nav__item,
   .nav__item:last-child {
     border: none;
@@ -110,7 +111,6 @@
     display: block;
   }
 }
-
 
 .nav-user {
   margin-left: auto;

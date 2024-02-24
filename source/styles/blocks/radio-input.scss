@@ -3,15 +3,17 @@
   line-height: 23px;
   position: relative;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
-// .control:hover {
-//   color: rgba(255, 255, 255, 0.6);
-// }
+.control:hover,
+.control:focus {
+  color: $basic-violet-hover;
+}
 
-// .control:active {
-//   color: rgba(255, 255, 255, 0.3);
-// }
+.control:active {
+  color: $basic-violet-active;
+}
 
 .radio-input {
   opacity: 0;
@@ -20,79 +22,107 @@
 .radio-input:disabled+.control {
   color: #bdbdbd;
   cursor: auto;
-
-  &-radio::before {
-    border: 2px solid #e2e2e2;
-  }
 }
 
-.radio-input:disabled+.control-radio::before:hover {
-  border: 2px solid red;
+.radio-input:disabled+.control-radio::before {
+  border: 2px solid $light-grey-a;
 }
 
+.radio-input:disabled+.control-radio:hover:after {
+  background-color: $catalog-bg;
+}
+
+.radio-input:disabled:checked+.control-radio::before {
+  border-color: $light-grey-a;
+}
+
+.radio-input:disabled:checked+.control-radio::after {
+  background-color: $light-grey-a;
+}
+
+// .control::before {
+//   content: '';
+//   position: absolute;
+//   width: 24px;
+//   height: 24px;
+//   background-color: red;
+//   border-radius: 4px;
+//   left: -35px;
+//   top: 2px;
+// }
+
+// .radio-input:hover+.control::before {
+//   opacity: 0.6;
+// }
+
+// .control-input:focus+.control::before {
+//   outline: 3px solid #83b3d3;
+// }
+
+// .control-input:active+.control::before {
+//   outline: none;
+//   background: #9070EC;
+// }
+
+// .radio-input:hover+.control::after {
+//   background: red;
+// }
+
+// .radio-input:checked+.control::after {
+//   content: '';
+//   position: absolute;
+//   width: 12.2px;
+//   height: 10px;
+//   border-radius: 50%;
+//   left: -31px;
+//   top: 7px;
+// }
 
 .control::before {
   content: '';
   position: absolute;
   width: 24px;
   height: 24px;
-  background-color: yellow;
-  border-radius: 4px;
-  left: -35px;
-  top: 2px;
-}
-
-.radio-input:hover+.control::before {
-  opacity: 0.6;
-}
-
-.control-input:focus+.control::before {
-  outline: 3px solid #83b3d3;
-}
-
-.control-input:active+.control::before {
-  outline: none;
-  opacity: 0.3;
-}
-
-.radio-input:checked+.control::after {
-  content: '';
-  position: absolute;
-  width: 12.2px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-  left: -31px;
-  top: 7px;
-}
-
-.control-radio::before {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background-color: $default-white;
+  background-color: $catalog-bg;
   border: 2px solid #bdbdbd;
   border-radius: 50%;
   left: -26px;
+  transition: border-color 0.3s ease-in-out;
+
 }
 
-.radio-input:checked+.control-radio::after {
+.control::after {
   content: '';
   position: absolute;
   width: 16px;
   height: 16px;
-  background-color: $basic-violet;
+  background-color: $catalog-bg; // внутр круг
   border-radius: 50%;
   left: -22px;
-  top: 6px;
+  top: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.control:hover:before {
+  border-color: $basic-violet-hover;
+}
+
+.control:active:before {
+  border-color: $basic-violet-active;
+}
+
+.control:hover:after {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.control:active::after {
+  background-color: $basic-violet-active;
+}
+
+.radio-input:checked+.control-radio::after {
+  background-color: $basic-violet; // чекнутый внутр круг
 }
 
 .radio-input:checked+.control-radio::before {
   border: 2px solid $basic-violet;
-
 }
-
-
-
-
