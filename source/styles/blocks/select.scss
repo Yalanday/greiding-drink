@@ -11,6 +11,30 @@
   margin-bottom: 16px;
 }
 
+.select-wrapper {
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+}
+
+.select-wrapper:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  background: url("../../images/icons/arrow-down.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 14px;
+  right: 5px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.select-wrapper:focus-within::after {
+  transform: rotate(180deg);
+}
+
 .select__label {
   font-size: 16px;
   font-weight: 600;
@@ -18,10 +42,13 @@
 }
 
 .select__field {
+  position: relative;
+  padding: 4px 30px 4px 10px;
   appearance: none;
   max-width: 165px;
-  background-color: none;
-  border: 0;
+  background-color: $catalog-bg;
+  border: none;
+  border-radius: 4px;
   outline: 0;
   color: inherit;
   box-shadow: none;
@@ -33,18 +60,9 @@
   flex: 1;
   cursor: pointer;
 
-}
-
-option {
-  padding: 0 20px
-}
-
-.select-wrapper:hover {
-  background-color: aqua;
-}
-
-.select-wrapper {
-  padding: 4px 7px;
+  &:hover {
+    background-color: $basic-violet-ligth;
+  }
 }
 
 
