@@ -17,12 +17,8 @@ noUiSlider.create(stepsSlider, {
 });
 
 stepsSlider.noUiSlider.on('update', (values, handle) => {
-  inputs[handle].value = Math.floor(values[handle]);
+  inputs[1].value = Math.floor(values[handle]);
 });
-
-if (input0.value === '0') {
-  input0.style.color = '#bdbdbd';
-}
 
 inputs.forEach((input, handle) => {
 
