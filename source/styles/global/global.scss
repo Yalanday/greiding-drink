@@ -12,6 +12,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 

@@ -9,7 +9,7 @@
 
 @media (min-width: $tablet-width) {
   .hero {
-    background: linear-gradient(to bottom, var(--app-primaryColor) 75%, $default-white 25%);
+    background: linear-gradient(to bottom, var(--app-primaryColor) 72.2%, $default-white 27.8%);
   }
 }
 
@@ -21,7 +21,7 @@
 
 .hero__container {
   max-width: 320px;
-  padding: 20px;
+  padding: 20px 20px 37px;
   margin: 0 auto;
 }
 
@@ -35,7 +35,6 @@
 @media (min-width: $desktop-width) {
   .hero__container {
     max-width: $desktop-width;
-    padding: 30px 65px 84px;
-    border: 0.3px solid black;
+    padding: 0 45px;
   }
 }

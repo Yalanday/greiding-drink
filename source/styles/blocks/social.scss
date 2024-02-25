@@ -2,10 +2,20 @@
   @include list-reset;
   display: flex;
   align-items: center;
-  gap: 39px;
+  gap: 20px;
 }
 
+@media (min-width: $tablet-width) {
+  .social__list {
+    margin-right: -10px;
+  }
+}
 
+@media (min-width: $desktop-width) {
+  .social__list {
+    margin-bottom: 25.5px;
+  }
+}
 .social__link-icon {
   fill: $light-grey-b;
   border-radius: 4px;

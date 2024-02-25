@@ -44,3 +44,16 @@
     cursor: auto;
   }
 }
+
+
+@media (min-width: $tablet-width) {
+  .button--reset {
+    width: 120px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button--reset {
+    width: 149px;
+  }
+}

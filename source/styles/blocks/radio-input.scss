@@ -1,9 +1,11 @@
 .control {
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   position: relative;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+  margin-left: 9px;
 }
 
 .control:hover,
@@ -40,44 +42,6 @@
   background-color: $light-grey-a;
 }
 
-// .control::before {
-//   content: '';
-//   position: absolute;
-//   width: 24px;
-//   height: 24px;
-//   background-color: red;
-//   border-radius: 4px;
-//   left: -35px;
-//   top: 2px;
-// }
-
-// .radio-input:hover+.control::before {
-//   opacity: 0.6;
-// }
-
-// .control-input:focus+.control::before {
-//   outline: 3px solid #83b3d3;
-// }
-
-// .control-input:active+.control::before {
-//   outline: none;
-//   background: #9070EC;
-// }
-
-// .radio-input:hover+.control::after {
-//   background: red;
-// }
-
-// .radio-input:checked+.control::after {
-//   content: '';
-//   position: absolute;
-//   width: 12.2px;
-//   height: 10px;
-//   border-radius: 50%;
-//   left: -31px;
-//   top: 7px;
-// }
-
 .control::before {
   content: '';
   position: absolute;
@@ -86,9 +50,8 @@
   background-color: $catalog-bg;
   border: 2px solid #bdbdbd;
   border-radius: 50%;
-  left: -26px;
+  left: -34px;
   transition: border-color 0.3s ease-in-out;
-
 }
 
 .control::after {
@@ -96,10 +59,10 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  background-color: $catalog-bg; // внутр круг
+  background-color: $catalog-bg;
   border-radius: 50%;
-  left: -22px;
-  top: 4px;
+  left: -30px;
+  top: 1.5px;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -120,7 +83,7 @@
 }
 
 .radio-input:checked+.control-radio::after {
-  background-color: $basic-violet; // чекнутый внутр круг
+  background-color: $basic-violet;
 }
 
 .radio-input:checked+.control-radio::before {
