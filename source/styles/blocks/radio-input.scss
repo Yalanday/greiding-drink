@@ -30,7 +30,7 @@
   border: 2px solid $light-grey-a;
 }
 
-.radio-input:disabled+.control-radio:hover:after {
+.radio-input:disabled+.control-radio:hover::after {
   background-color: $catalog-bg;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .control::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 24px;
   height: 24px;
@@ -55,7 +55,7 @@
 }
 
 .control::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -66,15 +66,15 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.control:hover:before {
+.control:hover::before {
   border-color: $basic-violet-hover;
 }
 
-.control:active:before {
+.control:active::before {
   border-color: $basic-violet-active;
 }
 
-.control:hover:after {
+.control:hover::after {
   background-color: rgba(120, 89, 207, 0.25);
 }
 

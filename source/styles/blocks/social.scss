@@ -16,6 +16,7 @@
     margin-bottom: 25.5px;
   }
 }
+
 .social__link-icon {
   fill: $light-grey-b;
   border-radius: 4px;
@@ -34,11 +35,11 @@
   justify-content: center;
 
   &:hover {
-    background-color: #F0EBFF;
+    background-color: $basic-violet-ligth;
   }
 
   &:focus {
-    background-color: #F0EBFF;
+    background-color: $basic-violet-ligth;
     outline: none;
   }
 

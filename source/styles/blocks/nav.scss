@@ -3,7 +3,6 @@
   top: 100%;
   width: 100%;
   z-index: 1;
-
 }
 
 @media (min-width: $tablet-width) {
@@ -76,7 +75,7 @@
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 1px solid #F0EBFF;
+  border-bottom: 1px solid $basic-violet-ligth;
 
   &--user {
     border: none;
@@ -91,7 +90,6 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .nav__item,
   .nav__item:last-child {
     border: none;
@@ -103,7 +101,7 @@
   color: inherit;
   display: flex;
   gap: 9px;
-  padding: 22px 22px;
+  padding: 22px;
 
   &:hover {
     color: $basic-violet;
@@ -150,7 +148,6 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .nav__link:hover .nav__link-icon,
   .nav__link:focus .nav__link-icon {
     fill: $basic-violet-hover;
@@ -175,7 +172,6 @@
   margin-left: auto;
   margin-bottom: auto
 }
-
 
 .nav-user__list {
   @include list-reset;

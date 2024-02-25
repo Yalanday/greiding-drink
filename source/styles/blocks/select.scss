@@ -4,7 +4,7 @@
   border-radius: 4px;
 }
 
-.select-wrapper:after {
+.select-wrapper::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -37,7 +37,6 @@
   border: none;
   border-radius: 4px;
   outline: 0;
-  color: inherit;
   box-shadow: none;
   font-family: inherit;
   color: $basic-violet;
@@ -51,5 +50,3 @@
     background-color: $basic-violet-ligth;
   }
 }
-
-

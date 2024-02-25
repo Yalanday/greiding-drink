@@ -22,7 +22,6 @@
   display: inline-flex;
   gap: 10px;
   outline: none;
-
 }
 
 .checkbox__wrapper {
@@ -40,7 +39,6 @@
 .checkbox__input:checked+.checkbox__slider {
   background-color: $basic-violet;
   border: 2px solid $basic-violet;
-
 }
 
 .checkbox__slider {
@@ -85,7 +83,7 @@
   outline: none;
 }
 
-.checkbox__input:disabled:checked + .checkbox__slider .checkbox__knob {
+.checkbox__input:disabled:checked+.checkbox__slider .checkbox__knob {
   background: $light-grey-b;
 }
 
@@ -94,5 +92,3 @@
   border-color: $light-grey-a;
   cursor: auto;
 }
-
-

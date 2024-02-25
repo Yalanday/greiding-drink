@@ -24,7 +24,7 @@
   max-width: 349px;
   padding: 40px 20px 21px;
   background-color: $default-white;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: $tablet-width) {
@@ -84,7 +84,7 @@
   .product__description {
     margin-bottom: 21px;
   }
-  }
+}
 
 .product__sell {
   display: flex;
@@ -109,7 +109,6 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-
 }
 
 .product__pagination {
