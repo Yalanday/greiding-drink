@@ -48,13 +48,13 @@
     font-size: 42px;
     font-weight: 700;
     line-height: 64px;
-    margin-bottom: 60px
+    margin-bottom: 60px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .features__description {
-    margin-bottom: 76px
+    margin-bottom: 76px;
   }
 }
 
@@ -64,7 +64,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 33.5px
+  gap: 33.5px;
 }
 
 @media (min-width: $tablet-width) {
@@ -80,7 +80,6 @@
 @media (min-width: $desktop-width) {
   .features__list {
     width: 100%;
-    // margin-left: -2px;
     margin-top: 1px;
   }
 }
@@ -241,6 +240,5 @@
     line-height: 24px;
     text-align: center;
     margin-top: 9px;
-
   }
 }

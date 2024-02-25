@@ -189,4 +189,3 @@ prev.addEventListener('click', () => {
 });
 
 startSliderScripts();
-

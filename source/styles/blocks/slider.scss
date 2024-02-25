@@ -8,8 +8,7 @@
     "badge"
     "title"
     "description"
-    "buy"
-  ;
+    "buy";
 }
 
 @media (min-width: $tablet-width) {
@@ -19,8 +18,7 @@
       "title"
       "description"
       "buy"
-      "picture"
-    ;
+      "picture";
     padding: 0 60px;
   }
 }
@@ -31,9 +29,7 @@
       "picture badge"
       "picture title"
       "picture description"
-      "picture buy"
-
-    ;
+      "picture buy";
   }
 }
 
@@ -46,10 +42,8 @@
 @media (min-width: $desktop-width) {
   .slider__picture {
     margin-right: 29px;
-
   }
 }
-
 
 .slider__badge {
   grid-area: badge;
@@ -73,7 +67,7 @@
 
 .slider__title {
   grid-area: title;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
   font-size: $font-big;
   line-height: 48px;
   font-weight: 700;
@@ -100,7 +94,7 @@
 .slider__description {
   grid-area: description;
   min-height: 100px;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
   color: $dark-color;
   font-size: $font-small;
   line-height: 20px;
