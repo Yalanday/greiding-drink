@@ -1,6 +1,6 @@
 .slider {
-  width: 100%;
   @include list-reset;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -138,36 +138,36 @@
   }
 }
 
-#slider-wrapper {
+.slider-wrapper {
   margin: 0 auto;
   position: relative;
   width: 280px;
 }
 
 @media (min-width: $tablet-width) {
-  #slider-wrapper {
+  .slider-wrapper {
     width: $tablet-width - 40px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  #slider-wrapper {
+  .slider-wrapper {
     width: $desktop-width - 80px;
   }
 }
 
-#slider {
+.gallery__slider {
   overflow: auto;
   scrollbar-width: none;
   position: relative;
 }
 
-#slider::-webkit-scrollbar {
+.gallery__slider::-webkit-scrollbar {
   height: 0;
 }
 
-#prev,
-#next {
+.prev,
+.next {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -178,19 +178,19 @@
   cursor: pointer;
 
   &:hover {
-    background: linear-gradient(90.00deg, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%);
   }
 
   &:focus {
-    background: linear-gradient(90.00deg, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%);
   }
 
   &:active {
-    background: linear-gradient(90.00deg, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0) 100%);
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0) 100%);
   }
 }
 
-#prev {
+.prev {
   width: 20px;
   height: 656px;
   top: -20px;
@@ -202,7 +202,7 @@
   }
 }
 
-#next {
+.next {
   width: 20px;
   height: 656px;
   top: -20px;
@@ -216,13 +216,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  #prev {
+  .prev {
     width: 80px;
     height: 640px;
-    top: -59px
+    top: -59px;
   }
 
-  #next {
+  .next {
     width: 80px;
     height: 640px;
     top: -59px;
@@ -232,14 +232,14 @@
 }
 
 @media (min-width: $desktop-width) {
-  #prev {
+  .prev {
     width: 80px;
     height: 714px;
     top: 0;
     left: -47px;
   }
 
-  #next {
+  .next {
     width: 80px;
     height: 714px;
     top: 0;
@@ -247,7 +247,6 @@
     transform: rotate(180deg);
   }
 }
-
 
 .prev-img {
   display: inline-block;
@@ -259,7 +258,7 @@
   background-size: cover;
 }
 
-#content {
+.gallery__content {
   display: grid;
   grid-auto-flow: column;
   box-sizing: border-box;
@@ -289,7 +288,7 @@
   position: absolute;
   display: none;
   left: 580px;
-  bottom: 70px
+  bottom: 70px;
 }
 
 @media (min-width: $desktop-width) {
@@ -309,7 +308,7 @@
 .slider__pagination-item {
   width: 62px;
   height: 4px;
-  background-color: white;
+  background-color: $default-white;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;

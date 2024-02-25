@@ -62,7 +62,7 @@ inputs.forEach((input, handle) => {
   });
 });
 
-
+//Бургер меню
 const burgerButton = document.querySelector('.js-toggle-button');
 const nav = document.querySelector('.nav__list');
 
@@ -71,11 +71,10 @@ burgerButton.onclick = function () {
   burgerButton.classList.toggle('burger-button--close');
 };
 
-
 // Слайдер карточек
-const slider = document.getElementById('slider');
-const next = document.getElementById('next');
-const prev = document.getElementById('prev');
+const slider = document.querySelector('.gallery__slider');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 const sliderItems = document.querySelector('.slider__item');
 const pagItems = document.querySelectorAll('.slider__pagination-item');
 let countSlider = 0;

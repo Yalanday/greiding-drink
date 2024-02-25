@@ -15,7 +15,7 @@
       <div class="header__container">
         <div class="header__logo">
           <a class="header__logo-link" href="#">
-            <picture class="header__logo-picture" >
+            <picture class="header__logo-picture">
               <source type="image/svg+xml" width="170" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
               <source type="image/svg+xml" width="82" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
               <img src="images/logo-mobile.svg" width="32" height="36" alt="Логотип.">
@@ -75,11 +75,11 @@
 
           <div class="gallery">
 
-            <div id="slider-wrapper">
-              <div id="slider">
-                <div id="content">
-                  <div class="slider__item">
+            <div class="slider-wrapper" id="slider-wrapper">
+              <div class="gallery__slider" id="slider">
+                <div class="gallery__content" id="content">
 
+                  <div class="slider__item">
                     <div class="hero__slider slider">
                       <picture class="slider__picture">
                         <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
@@ -139,6 +139,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="slider__item">
                     <div class="hero__slider slider">
                       <picture class="slider__picture">
@@ -170,10 +171,11 @@
                   </div>
                 </div>
               </div>
-              <button type="button" id="prev">
+
+              <button class="prev" type="button" id="prev">
                 <span class="prev-img">&nbsp;</span>
               </button>
-              <button type="button" id="next">
+              <button class="next" type="button" id="next">
                 <span class="prev-img">&nbsp;</span>
               </button>
               <div class="slider__pagination">
@@ -189,6 +191,7 @@
 
         </div>
       </section>
+
       <section class="features" data-test="features">
         <div class="features__container">
           <h2 class="features__title">
@@ -233,7 +236,6 @@
           </ul>
         </div>
       </section>
-
       <section class="catalog" data-test="catalog">
         <div class="catalog__container">
           <h2 class="catalog__title">
@@ -246,72 +248,70 @@
             <div class="form__wrapper">
               <fieldset class="form__fieldset price-filter">
                 <legend class="price-filter__title">Цена</legend>
-
                 <div class="range">
                   <div class="range__container">
                     <div class="range__slider">
-                      <div id="steps-slider"></div><!-- элемент слайдера диапазона -->
+                      <div id="steps-slider"></div>
                     </div>
                   </div>
                   <div class="range__values price-filter__inputs">
                     <label class="min-cost-label" aria-label="Минимальная цена">
-                      <input class="price-filter__input" id="input-with-keypress-0" name="min" type="number"
+                      <input class="price-filter__input" id="input-with-keypress-0" name="min" type="text"
                         placeholder="0" />
                     </label>
                     <span class="price-filter__inputs-dash">&nbsp;</span>
                     <label class="max-cost-label" aria-label="Максимальная цена">
-                      <input class="price-filter__input" id="input-with-keypress-1" name="max" type="number" />
+                      <input class="price-filter__input" id="input-with-keypress-1" name="max" type="text" />
                     </label>
                   </div>
                 </div>
               </fieldset>
-
               <fieldset class="form__fieldset price-filter padio-inputs">
-                <legend class="form__fieldset-title price-filter__title price-filter__title--milk">Наличие молока</legend>
+                <legend class="form__fieldset-title price-filter__title price-filter__title--milk">Наличие молока
+                </legend>
+
                 <ul class="price-filter__list">
-                  <li class="price-filter__item">
-                    <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
-                      id="milk-radio" checked>
-                    <label class="control control-radio active-radio" for="milk-radio">
+                  <li class="price-filter__item radio">
+                    <label class="radio__label">
+                      <input class="radio__input" type="radio" name="milk" checked />
                       Неважно
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
-                    <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
-                      id="animal-milk-radio">
-                    <label class="control control-radio" for="animal-milk-radio">
-                      Только животное
+
+                  <li class="price-filter__item radio">
+                    <label class="radio__label ">
+                      <input class="radio__input" type="radio" name="milk" />
+                      Только животные
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
-                    <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
-                      id="vegan-milk-radio">
-                    <label class="control control-radio" for="vegan-milk-radio">
+
+                  <li class="price-filter__item radio">
+                    <label class="radio__label">
+                      <input class="radio__input" type="radio" name="milk" />
                       Только растительное
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
-                    <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
-                      id="no-milk-radio" disabled>
-                    <label class="control control-radio" for="no-milk-radio">
+
+                  <li class="price-filter__item radio">
+                    <label class="radio__label">
+                      <input class="radio__input" type="radio" name="milk" disabled />
                       Без молока
                     </label>
                   </li>
                 </ul>
               </fieldset>
-
               <fieldset class="form__fieldset price-filter checkbox-inputs">
-                <legend class="form__fieldset-title price-filter__title price-filter__title--country">Страна произростания</legend>
+                <legend class="form__fieldset-title price-filter__title price-filter__title--country">Страна
+                  произростания</legend>
                 <ul class="price-filter__list checkbox-list">
                   <li class="price-filter__item">
                     <label class="price-filter__item-checkbox checkbox" for="brazil" tabindex="0">
-                      <div class="checkbox__wrapper">
+                      <b class="checkbox__wrapper">
                         <input class="checkbox__input" type="checkbox" id="brazil" name="brazil" checked>
-                        <div class="checkbox__slider">
-                          <div class="checkbox__knob"></div>
-                        </div>
-                      </div>
-
+                        <b class="checkbox__slider">
+                          <b class="checkbox__knob"></b>
+                        </b>
+                      </b>
                       <span class="checkbox__label-text">
                         Бразилия
                       </span>
@@ -319,12 +319,12 @@
                   </li>
                   <li class="price-filter__item">
                     <label class="price-filter__item-checkbox checkbox" for="efiopy" tabindex="-1">
-                      <div class="checkbox__wrapper">
+                      <b class="checkbox__wrapper">
                         <input class="checkbox__input" type="checkbox" id="efiopy" name="efiopy">
-                        <div class="checkbox__slider">
-                          <div class="checkbox__knob"></div>
-                        </div>
-                      </div>
+                        <b class="checkbox__slider">
+                          <b class="checkbox__knob"></b>
+                        </b>
+                      </b>
                       <span class="checkbox__label-text">
                         Эфиопия
                       </span>
@@ -332,12 +332,12 @@
                   </li>
                   <li class="price-filter__item">
                     <label class="price-filter__item-checkbox checkbox" for="columbia" tabindex="-1">
-                      <div class="checkbox__wrapper">
+                      <b class="checkbox__wrapper">
                         <input class="checkbox__input" type="checkbox" id="columbia" name="columbia">
-                        <div class="checkbox__slider">
-                          <div class="checkbox__knob"></div>
-                        </div>
-                      </div>
+                        <b class="checkbox__slider">
+                          <b class="checkbox__knob"></b>
+                        </b>
+                      </b>
                       <span class="checkbox__label-text">
                         Колумбия
                       </span>
@@ -345,12 +345,12 @@
                   </li>
                   <li class="price-filter__item">
                     <label class="price-filter__item-checkbox checkbox" for="costa-rica">
-                      <div class="checkbox__wrapper">
+                      <b class="checkbox__wrapper">
                         <input class="checkbox__input" type="checkbox" id="costa-rica" name="costa-rica">
-                        <div class="checkbox__slider">
-                          <div class="checkbox__knob"></div>
-                        </div>
-                      </div>
+                        <b class="checkbox__slider">
+                          <b class="checkbox__knob"></b>
+                        </b>
+                      </b>
                       <span class="checkbox__label-text">
                         Коста-Рика
                       </span>
@@ -358,18 +358,17 @@
                   </li>
                   <li class="price-filter__item">
                     <label class="price-filter__item-checkbox checkbox" for="peru">
-                      <div class="checkbox__wrapper">
+                      <b class="checkbox__wrapper">
                         <input class="checkbox__input" type="checkbox" id="peru" name="peru" disabled>
-                        <div class="checkbox__slider">
-                          <div class="checkbox__knob"></div>
-                        </div>
-                      </div>
+                        <b class="checkbox__slider">
+                          <b class="checkbox__knob"></b>
+                        </b>
+                      </b>
                       <span class="checkbox__label-text">
                         Перу
                       </span>
                     </label>
                   </li>
-
                 </ul>
               </fieldset>
             </div>
@@ -378,9 +377,7 @@
               <button class="button button--reset" type="reset">Сбросить</button>
             </div>
           </form>
-
           <div class="catalog__product">
-
             <div class="catalog__select">
               <span class="select__label">Сортировка:</span>
               <div class="select-wrapper">
@@ -391,8 +388,8 @@
                 </select>
               </div>
             </div>
-
             <ul class="product__cards">
+
               <li class="product__card">
                 <picture class="product__picture">
                   <source type="image/webp" srcset="images/catalog-1@1x.webp 1x, images/catalog-1@2x.webp 2x">
@@ -416,6 +413,7 @@
                   </button>
                 </div>
               </li>
+
               <li class="product__card">
                 <picture class="product__picture">
                   <source type="image/webp" srcset="images/catalog-2@1x.webp 1x, images/catalog-2@2x.webp 2x">
@@ -439,6 +437,7 @@
                   </button>
                 </div>
               </li>
+
               <li class="product__card">
                 <picture class="product__picture">
                   <source type="image/webp" srcset="images/catalog-3@1x.webp 1x, images/catalog-3@2x.webp 2x">
@@ -462,6 +461,7 @@
                   </button>
                 </div>
               </li>
+
               <li class="product__card">
                 <picture class="product__picture">
                   <source type="image/webp" srcset="images/catalog-4@1x.webp 1x, images/catalog-4@2x.webp 2x">
@@ -485,6 +485,7 @@
                   </button>
                 </div>
               </li>
+
               <li class="product__card">
                 <picture class="product__picture">
                   <source type="image/webp" srcset="images/catalog-5@1x.webp 1x, images/catalog-5@2x.webp 2x">
@@ -532,7 +533,6 @@
                 </div>
               </li>
             </ul>
-
             <div class="product__pagination pagination">
               <ul class="pagination__list ">
                 <li class="pagination__item">
@@ -572,12 +572,9 @@
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
-
       </section>
-
       <section class="map" data-test="map">
         <h2 class="map__titile visually-hidden">Карта</h2>
         <div class="map__contetn">
@@ -587,11 +584,8 @@
             </svg>
           </span>
         </div>
-
       </section>
-
     </main>
-
   </div>
   <footer class="footer" data-test="footer">
     <div class="footer__container">
@@ -633,7 +627,6 @@
           </li>
         </ul>
       </div>
-
       <ul class="footer__list">
         <li class="footer__items">
           <div class="endless-line">&nbsp;</div>
@@ -661,7 +654,6 @@
             </li>
           </ul>
         </li>
-
         <li class="footer__items">
           <div class="endless-line">&nbsp;</div>
           <h3 class="footer__items-title">Медиа</h3>
@@ -683,7 +675,6 @@
             </li>
           </ul>
         </li>
-
         <li class="footer__items">
           <div class="endless-line">&nbsp;</div>
           <h3 class="footer__items-title">Контакты</h3>
@@ -694,7 +685,8 @@
                   <use href="images/icons/stack.svg#adress" xmlns="http://www.w3.org/2000/svg">
                   </use>
                 </svg>
-                <span class="footer__link-adress footer__link-adress--to-left">Санкт-Петербург, набережная реки Карповки,&nbspдом 5</span>
+                <span class="footer__link-adress footer__link-adress--to-left">Санкт-Петербург, набережная реки
+                  Карповки,&nbsp;дом 5</span>
               </a>
             </li>
             <li class="footer__items-item">
@@ -720,9 +712,7 @@
         </a>
       </div>
     </div>
-
   </footer>
-
   <script src="scripts/index.js"></script>
 </body>
 
