@@ -1,0 +1,153 @@
+
+.range__container {
+  max-width: 720px;
+  margin: 0 -4px 0 2px;
+  margin-left: 2px;
+  padding: 0 0 0 20px;
+}
+
+.range {
+  width: 280px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .range {
+    width: 217.5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range {
+    width: 318px;
+    margin-bottom: 0;
+  }
+}
+
+.range__slider {
+  margin-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .range__slider {
+    margin-bottom: 30px;
+    width: 199px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range__slider {
+    margin-bottom: 34px;
+    width: 303px;
+  }
+}
+
+.range__values input {
+  height: 40px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: inherit;
+  border: 2px solid $basic-violet;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  --webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  --moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  --moz-appearance: number-input;
+}
+
+.noUi-handle {
+  border: none;
+  border-radius: 50%;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
+
+.noUi-handle-lower,
+.noUi-handle-upper {
+  background: $default-white;
+  border: 2px solid $basic-violet-hover;
+  outline: none;
+
+  &:hover {
+    background:
+      radial-gradient(rgba(120, 89, 207, 0.25) 8px, $default-white 2px),
+      radial-gradient($default-white, $default-white);
+  }
+
+  &:focus {
+    background:
+      radial-gradient(rgba(120, 89, 207, 0.25) 8px, $default-white 2px),
+      radial-gradient($default-white, $default-white);
+    outline: none;
+
+  }
+
+  &:active {
+    background:
+      radial-gradient($basic-violet-active 8px, $default-white 2px),
+      radial-gradient($default-white, $default-white);
+    border-color: $basic-violet;
+  }
+}
+
+.noUi-horizontal {
+  height: 3px;
+  background-color: $catalog-bg;
+}
+
+.noUi-connects {
+  background: linear-gradient(to bottom,
+      $catalog-bg 25%,
+      $light-grey-a 25% 75%,
+      $catalog-bg 75%);
+  height: 4px;
+}
+
+.noUi-connect {
+  background-color: $basic-violet;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 24px;
+  height: 24px;
+  top: -10px;
+  right: -2px;
+}
+
+.noUi-tooltip {
+  display: none;
+}
+
+.noUi-base {
+  background-color: $catalog-bg;
+  height: 1px;
+}
+
+#steps-slider {
+  border: none;
+}
+
+.noUi-handle {
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:focus {
+    outline: none
+  }
+}

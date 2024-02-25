@@ -6,7 +6,7 @@
 
 /* VENDORS */
 @import "../vendor/nouislider.scss";
-
+@import "../vendor/range.scss";
 /* BLOCKS */
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/wrapper.scss";
@@ -23,7 +23,6 @@
 @import "./blocks/catalog.scss";
 @import "./blocks/form.scss";
 @import "./blocks/price-filter.scss";
-@import "./blocks/range.scss";
 @import "./blocks/radio-input.scss";
 @import "./blocks/checkbox.scss";
 @import "./blocks/product.scss";

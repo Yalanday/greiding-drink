@@ -77,8 +77,8 @@
 }
 
 .footer__list {
-  grid-area: list;
   @include list-reset;
+  grid-area: list;
   display: flex;
   flex-direction: column;
   gap: 19px;

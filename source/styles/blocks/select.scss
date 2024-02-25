@@ -32,6 +32,7 @@
   position: relative;
   padding: 4px 25px 4px 15px;
   appearance: none;
+  --webkit-appearance: none;
   max-width: 165px;
   background-color: $catalog-bg;
   border: none;

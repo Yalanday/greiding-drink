@@ -22,6 +22,7 @@
   display: inline-flex;
   gap: 10px;
   outline: none;
+  cursor: pointer;
 }
 
 .checkbox__wrapper {
@@ -36,7 +37,7 @@
   display: none;
 }
 
-.checkbox__input:checked+.checkbox__slider {
+.checkbox__input:checked + .checkbox__slider {
   background-color: $basic-violet;
   border: 2px solid $basic-violet;
 }
@@ -50,21 +51,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 300ms ease;
+  --webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 .checkbox__wrapper .checkbox__knob {
+  margin: 0;
   position: absolute;
-  -webkit-transition: all 300ms ease;
+  --webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-}
-
-.checkbox__input:checked+.checkbox__slider .checkbox__knob {
-  left: calc(100% - 20px);
-}
-
-.checkbox__wrapper .checkbox__knob {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -75,6 +70,9 @@
   background-position: center;
 }
 
+.checkbox__input:checked + .checkbox__slider .checkbox__knob {
+  left: calc(100% - 20px);
+}
 
 .checkbox:hover .checkbox__slider,
 .checkbox:focus .checkbox__slider {
@@ -83,11 +81,11 @@
   outline: none;
 }
 
-.checkbox__input:disabled:checked+.checkbox__slider .checkbox__knob {
+.checkbox__input:disabled:checked + .checkbox__slider .checkbox__knob {
   background: $light-grey-b;
 }
 
-.checkbox__input:disabled+.checkbox__slider {
+.checkbox__input:disabled + .checkbox__slider {
   background-color: $light-grey-a;
   border-color: $light-grey-a;
   cursor: auto;

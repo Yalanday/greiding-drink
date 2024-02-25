@@ -1,91 +1,68 @@
-.control {
+.radio__label {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
-  margin-left: 9px;
+  width: max-content;
 }
 
-.control:hover,
-.control:focus {
-  color: $basic-violet-hover;
+.radio__input {
+  --webkit-appearance: none;
+  appearance: none;
+  background-color: $catalog-bg;
+  margin: 0;
+  font-family: inherit;
+  color: currentColor;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $light-grey-b;
+  border-radius: 50%;
+  transform: translateY(-0.07em);
+  transition: border-color 0.3s ease-in-out, bacground-color 0.3s ease-in-out;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
 }
 
-.control:active {
-  color: $basic-violet-active;
-}
-
-.radio-input {
+.radio__input::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $catalog-bg;
   opacity: 0;
 }
 
-.radio-input:disabled+.control {
-  color: #bdbdbd;
-  cursor: auto;
+.radio__input:hover,
+.radio__input:focus {
+  border-color: $basic-violet;
+  background: radial-gradient(rgba(120, 89, 207, 0.25) 8px, $catalog-bg 2px);
+  outline: none;
 }
 
-.radio-input:disabled+.control-radio::before {
-  border: 2px solid $light-grey-a;
+.radio__input:hover::before,
+.radio__input:focus-within::before {
+  background: radial-gradient(rgba(120, 89, 207, 0.25) 8px, $catalog-bg 2px);
 }
 
-.radio-input:disabled+.control-radio:hover::after {
-  background-color: $catalog-bg;
+.radio__input:checked {
+  background: radial-gradient($basic-violet 8px, $catalog-bg 2px);
+  border-color: $basic-violet;
 }
 
-.radio-input:disabled:checked+.control-radio::before {
+.radio__input:disabled {
   border-color: $light-grey-a;
+  pointer-events: none;
 }
 
-.radio-input:disabled:checked+.control-radio::after {
-  background-color: $light-grey-a;
+.radio__label:has(.radiola:disabled) {
+  color: $light-grey-b;
+  pointer-events: none;
 }
 
-.control::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background-color: $catalog-bg;
-  border: 2px solid #bdbdbd;
-  border-radius: 50%;
-  left: -34px;
-  transition: border-color 0.3s ease-in-out;
-}
-
-.control::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: $catalog-bg;
-  border-radius: 50%;
-  left: -30px;
-  top: 1.5px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.control:hover::before {
-  border-color: $basic-violet-hover;
-}
-
-.control:active::before {
-  border-color: $basic-violet-active;
-}
-
-.control:hover::after {
-  background-color: rgba(120, 89, 207, 0.25);
-}
-
-.control:active::after {
-  background-color: $basic-violet-active;
-}
-
-.radio-input:checked+.control-radio::after {
-  background-color: $basic-violet;
-}
-
-.radio-input:checked+.control-radio::before {
-  border: 2px solid $basic-violet;
+.radio__input:checked[disabled] {
+  background: radial-gradient($light-grey-a 8px, $catalog-bg 2px);
 }
