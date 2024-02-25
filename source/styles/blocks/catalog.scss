@@ -3,9 +3,8 @@
 }
 
 .catalog__container {
-  border: 0.2px solid silver;
   max-width: 320px;
-  padding: 53px 20px 0;
+  padding: 50px 20px 0;
   margin: 0 auto;
   display: grid;
   grid-template-areas:
@@ -26,7 +25,7 @@
 @media (min-width: $desktop-width) {
   .catalog__container {
     max-width: $desktop-width;
-    padding: 103px 40px 0;
+    padding: 100px 40px 0;
     grid-template-areas:
       "title title"
       "description description"
@@ -38,6 +37,7 @@
 .catalog__title {
   grid-area: title;
   margin: 0;
+  margin-bottom: 4px;
   text-transform: uppercase;
   color: $basic-violet;
   font-size: 12px;
@@ -48,6 +48,8 @@
 }
 
 .catalog__description {
+  margin: 0;
+  margin-bottom: 20px;
   grid-area: description;
   text-align: center;
   font-size: 24px;
@@ -60,15 +62,56 @@
     font-size: 42px;
     font-weight: 700;
     line-height: 64px;
+    margin-bottom: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__description {
+margin-bottom: 37px;
   }
 }
 
 .catalog__form {
   grid-area: form;
-  margin-bottom: 53px;
+  margin-bottom: 40px;
 }
 
 
 .catalog__product {
   grid-area: product;
+  margin-bottom: 4px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__product {
+    margin-bottom: 0;
+  }
+}
+
+.catalog__select {
+  width: 280px;
+  min-height: 32px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  padding: 0 0 0 4px;
+  margin-left: -2px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__select {
+    margin-left: auto;
+    margin-right: 5px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__select {
+    margin-right: 6px;
+  }
 }

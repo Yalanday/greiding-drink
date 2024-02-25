@@ -2,11 +2,30 @@
   margin-bottom: 15px;
 }
 
+@media (min-width: $tablet-width) {
+  .price-filter {
+    margin-top: 3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price-filter {
+    margin-bottom: 0;
+  }
+}
+
 .price-filter__title {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   margin-bottom: 30px;
+  margin-left: -2px;
+
+  &--milk,
+  &--country {
+  margin-bottom: 20px;
+  }
+
 }
 
 .price-filter__inputs {
@@ -18,7 +37,13 @@
 
 @media (min-width: $tablet-width) {
   .price-filter__inputs {
-    width: 100%;
+    width: 223px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price-filter__inputs {
+    width: 318px;
   }
 }
 
@@ -42,6 +67,12 @@ outline: none;
   }
 }
 
+@media (min-width: $desktop-width) {
+  .price-filter__input {
+    width: 134px;
+  }
+}
+
 .price-filter__input::placeholder {
   color: $light-grey-b;
 }
@@ -54,6 +85,7 @@ outline: none;
 
 .price-filter__list {
   @include list-reset;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   gap: 20px;

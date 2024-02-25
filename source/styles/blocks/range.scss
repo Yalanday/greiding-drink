@@ -1,28 +1,52 @@
 .range__container {
   max-width: 720px;
-  margin: 0 auto;
+  margin: 0 -4px 0 2px;
+  margin-left: 2px;
   padding: 0 0 0 20px;
+
 }
 
 .range {
   width: 280px;
-  margin-bottom: 34px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: $tablet-width) {
   .range {
-    width: 223px;
+    width: 217.5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range {
+    width: 318px;
+    margin-bottom: 0;
+
   }
 }
 
 .range__slider {
-  margin-bottom: 24px;
+  margin-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .range__slider {
+    margin-bottom: 30px;
+    width: 199px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range__slider {
+    margin-bottom: 34px;
+    width: 303px;
+  }
 }
 
 .range__values input {
   border: none;
-  height: 48px;
-  border-radius: 8px;
+  height: 40px;
+  border-radius: 4px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -83,7 +107,7 @@ input[type="number"]:focus {
     background:
       radial-gradient($basic-violet-active 8px, $default-white 2px),
       radial-gradient($default-white, $default-white);
-      border-color: $basic-violet;
+    border-color: $basic-violet;
   }
 }
 
@@ -132,12 +156,3 @@ input[type="number"]:focus {
     outline: none
   }
 }
-
-// .noUi-touch-area:focus {
-// }
-
-// .noUi-handle.noUi-handle-lower::before,
-// .noUi-handle.noUi-handle-upper::before {
-//   background: red;
-//   display: none
-// }

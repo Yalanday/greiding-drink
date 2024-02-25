@@ -11,14 +11,14 @@
   .features__container {
     max-width: $tablet-width;
     margin: 0 auto;
-    padding: 60px 20px 100px;
+    padding: 0 20px 100px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .features__container {
     max-width: $desktop-width;
-    padding: 100px 40px 120px;
+    padding: 100px 40px 118px;
   }
 }
 
@@ -31,10 +31,12 @@
   line-height: 16px;
   letter-spacing: 0.04em;
   text-align: center;
+  margin-bottom: 4px;
 }
 
 .features__description {
   margin: 0;
+  margin-bottom: 35px;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
@@ -50,50 +52,68 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .features__description {
+    margin-bottom: 76px
+  }
+}
+
 .features__list {
   @include list-reset;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 33.5px
 }
 
 @media (min-width: $tablet-width) {
   .features__list {
     flex-direction: row;
-    row-gap: 30px;
+    row-gap: 50px;
+    column-gap: 0;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 }
 
+@media (min-width: $desktop-width) {
+  .features__list {
+    width: 100%;
+    // margin-left: -2px;
+    margin-top: 1px;
+  }
+}
+
 .features__item {
   width: 280px;
+  margin-bottom: auto;
 }
 
 @media (min-width: $tablet-width) {
   .features__item {
-    width: 350px;
-    padding: 0 10px;
+    width: 360px;
+    padding: 0 20px 0 10px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .features__item {
-    width: 320px;
+    max-width: 317px;
     padding: 0;
   }
 }
 
 .features__item-title {
   margin: 0;
+  margin-bottom: 4px;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 9px;
   align-items: center;
 }
 
@@ -101,16 +121,23 @@
   .features__item-title {
     flex-direction: row;
     align-items: start;
+    column-gap: 20px;
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
+    margin-left: 3px;
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .features__item-title {
     flex-direction: column;
     align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    row-gap: 21px;
+    margin-bottom: 10px;
   }
 }
 
@@ -119,14 +146,21 @@
   display: block;
   width: 50px;
   height: 56px;
-  background-image: url("../../images/icons/speed-icon@1x.png");
+  background-image: url("../../images/speed-icon@1x.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 @media (min-resolution: 2dppx) {
   .features__item-title--speed::before {
-    background-image: url("../../images/icons/speed-icon@2x.png");
+    background-image: url("../../images/speed-icon@2x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features__item-title--speed::before {
+    margin-top: 4px;
+    margin-left: -3px;
   }
 }
 
@@ -135,14 +169,14 @@
   display: block;
   width: 52px;
   height: 56px;
-  background-image: url("../../images/icons/fit-icon@1x.png");
+  background-image: url("../../images/fit-icon@1x.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 @media (min-resolution: 2dppx) {
   .features__item-title--fit::before {
-    background-image: url("../../images/icons/fit-icon@2x.png");
+    background-image: url("../../images/fit-icon@2x.png");
   }
 }
 
@@ -151,14 +185,15 @@
   display: block;
   width: 42px;
   height: 56px;
-  background-image: url("../../images/icons/energy-icon@1x.png");
+  background-image: url("../../images/energy-icon@1x.png");
   background-size: cover;
   background-repeat: no-repeat;
+  margin-right: 10px;
 }
 
 @media (min-resolution: 2dppx) {
   .features__item-title--energy::before {
-    background-image: url("../../images/icons/energy-icon@2x.png");
+    background-image: url("../../images/energy-icon@2x.png");
   }
 }
 
@@ -167,14 +202,14 @@
   display: block;
   width: 46px;
   height: 56px;
-  background-image: url("../../images/icons/eco-icon@1x.png");
+  background-image: url("../../images/eco-icon@1x.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 @media (min-resolution: 2dppx) {
   .features__item-title--eco::before {
-    background-image: url("../../images/icons/eco-icon@2x.png");
+    background-image: url("../../images/eco-icon@2x.png");
   }
 }
 
@@ -193,6 +228,8 @@
     font-weight: 400;
     line-height: 24px;
     text-align: start;
+    margin-top: -17px;
+    margin-left: 2px;
   }
 }
 
@@ -203,5 +240,7 @@
     font-weight: 400;
     line-height: 24px;
     text-align: center;
+    margin-top: 9px;
+
   }
 }

@@ -103,6 +103,9 @@
     &::after {
       background: none;
     }
+  }
 
+  .pagination__link--large-next {
+    width: 104px;
   }
 }

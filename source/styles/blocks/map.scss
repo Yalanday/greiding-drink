@@ -52,7 +52,13 @@
 
 @media (min-width: $desktop-width) {
   .map__contetn {
+    margin-top: -2px;
     width: $desktop-width;
     height: 540px;
   }
+}
+
+.map__pin-icon {
+  margin-left: 30px;
+  margin-top: 3px;
 }

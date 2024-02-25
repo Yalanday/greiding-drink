@@ -15,7 +15,7 @@
       <div class="header__container">
         <div class="header__logo">
           <a class="header__logo-link" href="#">
-            <picture>
+            <picture class="header__logo-picture" >
               <source type="image/svg+xml" width="170" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
               <source type="image/svg+xml" width="82" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
               <img src="images/logo-mobile.svg" width="32" height="36" alt="Логотип.">
@@ -42,7 +42,7 @@
         <div class="header__nav nav-user">
           <ul class="nav-user__list">
             <li class="nav__item nav__item--user">
-              <a class="nav__link" href="#">
+              <a class="nav__link nav__link--user" href="#">
                 <svg class="nav__link-icon" width="16" height="16">
                   <use href="images/icons/stack.svg#user-icon" xmlns="http://www.w3.org/2000/svg">
                   </use>
@@ -51,7 +51,7 @@
               </a>
             </li>
             <li class="nav__item nav__item--user">
-              <a class="nav__link" href="#">
+              <a class="nav__link nav__link--user" href="#">
                 <svg class="nav__link-icon" width="16" height="16">
                   <use href="images/icons/stack.svg#basket-icon" xmlns="http://www.w3.org/2000/svg">
                   </use>
@@ -219,7 +219,7 @@
                 Бодрость
               </h3>
               <p class="features__item-description">
-                Сбалансированная доза кофеина даст мощный заряд энергии
+                Сбалансированная доза кофеина даст&nbsp;мощный заряд энергии
               </p>
             </li>
             <li class="features__item">
@@ -266,8 +266,8 @@
                 </div>
               </fieldset>
 
-              <fieldset class="form__fieldset price-filter">
-                <legend class="form__fieldset-title price-filter__title">Наличие молока</legend>
+              <fieldset class="form__fieldset price-filter padio-inputs">
+                <legend class="form__fieldset-title price-filter__title price-filter__title--milk">Наличие молока</legend>
                 <ul class="price-filter__list">
                   <li class="price-filter__item">
                     <input class="price-filter__control-input radio-input" type="radio" name="hotel-types"
@@ -300,9 +300,9 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="form__fieldset price-filter">
-                <legend class="form__fieldset-title price-filter__title">Страна производитель</legend>
-                <ul class="price-filter__list">
+              <fieldset class="form__fieldset price-filter checkbox-inputs">
+                <legend class="form__fieldset-title price-filter__title price-filter__title--country">Страна произростания</legend>
+                <ul class="price-filter__list checkbox-list">
                   <li class="price-filter__item">
                     <label class="price-filter__item-checkbox checkbox" for="brazil" tabindex="0">
                       <div class="checkbox__wrapper">
@@ -359,7 +359,7 @@
                   <li class="price-filter__item">
                     <label class="price-filter__item-checkbox checkbox" for="peru">
                       <div class="checkbox__wrapper">
-                        <input class="checkbox__input" type="checkbox" id="peru" name="peru">
+                        <input class="checkbox__input" type="checkbox" id="peru" name="peru" disabled>
                         <div class="checkbox__slider">
                           <div class="checkbox__knob"></div>
                         </div>
@@ -375,7 +375,7 @@
             </div>
             <div class="form__buttons">
               <button class="form__button button" type="submit">Применить</button>
-              <button class="form__button button button--reset" type="reset">Сбросить</button>
+              <button class="button button--reset" type="reset">Сбросить</button>
             </div>
           </form>
 
@@ -561,7 +561,7 @@
                   </button>
                 </li>
                 <li class="pagination__item">
-                  <button class="pagination__link pagination__link-next pagination__link--large" type="button">
+                  <button class="pagination__link pagination__link-next pagination__link--large-next" type="button">
                     <svg class="pagination__link-icon pagination__link-icon--reverse" width="6" height="10">
                       <use href="images/icons/stack.svg#pag-direction" xmlns="http://www.w3.org/2000/svg"></use>
                     </svg>
@@ -582,7 +582,7 @@
         <h2 class="map__titile visually-hidden">Карта</h2>
         <div class="map__contetn">
           <span class="map__pin">
-            <svg class="main-footer__link-icon" width="38" height="50">
+            <svg class="map__pin-icon" width="38" height="50">
               <use href="images/icons/stack.svg#map-pin" xmlns="http://www.w3.org/2000/svg"></use>
             </svg>
           </span>
@@ -618,7 +618,7 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <span class="visually-hidden">Пинтерест</span>
-              <svg class="social__link-icon social__link-icon--pin" width="20" height="20">
+              <svg class="social__link-icon social__link-icon--pin" width="22" height="22">
                 <use href="images/icons/stack.svg#pinterest" xmlns="http://www.w3.org/2000/svg"></use>
               </svg>
             </a>
@@ -637,7 +637,7 @@
       <ul class="footer__list">
         <li class="footer__items">
           <div class="endless-line">&nbsp;</div>
-          <h3 class="footer__items-title">Интернет магазин</h3>
+          <h3 class="footer__items-title">Интернет-магазин</h3>
           <ul class="footer__items-list">
             <li class="footer__items-item">
               <a class="footer__link" href="#">
@@ -687,14 +687,14 @@
         <li class="footer__items">
           <div class="endless-line">&nbsp;</div>
           <h3 class="footer__items-title">Контакты</h3>
-          <ul class="footer__items-list">
+          <ul class="footer__items-list footer__items-list--adress">
             <li class="footer__items-item">
-              <a class="footer__link footer__link--lower" href="#">
-                <svg class="footer__link footer__link-icon" width="20" height="16">
+              <a class="footer__link footer__link--lower footer__link--lower-adress" href="#">
+                <svg class="footer__link footer__link-icon" width="30" height="18">
                   <use href="images/icons/stack.svg#adress" xmlns="http://www.w3.org/2000/svg">
                   </use>
                 </svg>
-                <span>Санкт-Петербург, набережная реки Карповки,&nbspдом 5</span>
+                <span class="footer__link-adress footer__link-adress--to-left">Санкт-Петербург, набережная реки Карповки,&nbspдом 5</span>
               </a>
             </li>
             <li class="footer__items-item">
@@ -703,7 +703,7 @@
                   <use href="images/icons/stack.svg#phone" xmlns="http://www.w3.org/2000/svg">
                   </use>
                 </svg>
-                <span>+7 (999) 999-99-99</span>
+                <span class="footer__link-phone">+7 (999) 999-99-99</span>
               </a>
             </li>
           </ul>
@@ -713,7 +713,7 @@
         <a class="footer__link footer__link--lower footer__link--academy"
           href="https://htmlacademy.ru/intensive/adaptive" rel="noopener noreferrer" target="_blank">
           <span>Разработано в HTML Academy</span>
-          <svg class="footer__link-icon footer__link-icon--academy" width="9" height="12">
+          <svg class="footer__link-icon footer__link-icon--academy" width="12" height="16">
             <use href="images/icons/stack.svg#logo-academy" xmlns="http://www.w3.org/2000/svg">
             </use>
           </svg>

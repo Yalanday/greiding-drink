@@ -21,7 +21,7 @@
 }
 
 .header__container {
-  padding: 12px 20px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,7 @@
 
 @media (min-width: $desktop-width) {
   .header__container {
-    padding: 22px 40px;
+    padding: 0 40px;
   }
 }
 
@@ -37,10 +37,20 @@
   display: flex;
   gap: 22px;
   align-items: center;
+  pointer-events: none;
 }
 
-.header__logo {
-  pointer-events: none;
+@media (min-width: $desktop-width) {
+  .header__logo {
+    gap: 20px;
+    margin-bottom: auto;
+    padding-top: 22px;
+  }
+}
+
+.header__logo-picture {
+  display: flex;
+  align-items: end;
 }
 
 .header__logo-description {

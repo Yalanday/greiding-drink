@@ -1,6 +1,26 @@
+.checkbox-inputs {
+  margin-bottom: 9px;
+}
+
+@media (min-width: $tablet-width) {
+  .checkbox-inputs {
+    margin-bottom: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .checkbox-inputs {
+    margin-top: -10px;
+  }
+}
+
+.checkbox-list {
+  row-gap: 13.5px;
+}
+
 .checkbox {
   display: inline-flex;
-  gap: 12px;
+  gap: 10px;
   outline: none;
 
 }
