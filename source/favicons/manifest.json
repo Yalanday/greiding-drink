@@ -1,0 +1,35 @@
+{
+  "name": "App",
+  "icons": [
+      {
+        "src": "\/favicon-36x36.png",
+        "sizes": "36x36",
+        "type": "image\/png",
+        "density": "0.75"
+      },
+      {
+        "src": "\/favicon-152x152.png",
+        "sizes": "152x152",
+        "type": "image\/png",
+        "density": "1.0"
+      },
+      {
+        "src": "\/apple-icon-180x180.png",
+        "sizes": "192x192",
+        "type": "image\/png",
+        "density": "1.0"
+      },
+      {
+      "src": "\/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image\/png",
+      "density": "1.0"
+    },
+    {
+      "src": "\/favicon-512x512.png",
+      "sizes": "192x192",
+      "type": "image\/png",
+      "density": "1.0"
+    }
+  ]
+}

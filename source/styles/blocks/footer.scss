@@ -139,6 +139,7 @@
   &--adress {
     row-gap: 16px;
     margin-bottom: 21.5px;
+    margin-left: -6px;
   }
 }
 
@@ -155,11 +156,12 @@
     text-transform: none;
     display: flex;
     align-items: start;
-    gap: 7px;
+    gap: 6px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     padding-right: 10px;
+    margin-left: 6px;
   }
 
   &--academy {
@@ -171,6 +173,13 @@
     letter-spacing: 0;
     color: $light-grey-b;
     gap: 4px;
+    margin-left: -1px;
+    margin-top: 1px;
+  }
+
+  .footer__link-adress--to-left {
+    pointer-events: none;
+    margin-left: -6px;
   }
 
   &:hover {
@@ -202,8 +211,28 @@
   fill: $basic-violet-active;
 }
 
+.footer__link-icon--addres {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__link-icon--addres {
+    width: 29px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__link-icon--addres {
+    width: 49px;
+    height: 17px;
+    margin-right: -2px;
+  }
+}
+
 .footer__link-icon--academy {
-  margin-top: 4px;
+  margin-top: 1.5px;
   fill: $light-grey-b;
 }
 
@@ -213,7 +242,11 @@
   }
 }
 
-.footer__link-adress,
+.footer__link-adress {
+  font-style: normal;
+  letter-spacing: 0;
+}
+
 .footer__link-phone {
   letter-spacing: 0;
 }
@@ -222,6 +255,10 @@
   .footer__link-adress--to-left {
     margin-left: -2.5px;
   }
+}
+
+.footer__link--lower-adress {
+  pointer-events: none;
 }
 
 @media (min-width: $desktop-width) {
@@ -244,7 +281,7 @@
 
 @media (min-width: $desktop-width) {
   .footer__bottom {
-    margin-top: -19px;
+    margin-top: -10px;
     margin-left: 0;
   }
 }

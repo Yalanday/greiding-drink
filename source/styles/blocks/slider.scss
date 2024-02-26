@@ -45,6 +45,10 @@
   }
 }
 
+.slider__image {
+  object-fit: cover;
+}
+
 .slider__badge {
   grid-area: badge;
   text-transform: uppercase;
@@ -199,6 +203,7 @@
   &:disabled {
     opacity: 0.2;
     cursor: auto;
+    pointer-events: none;
   }
 }
 
