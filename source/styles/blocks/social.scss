@@ -1,8 +1,9 @@
 .social__list {
   @include list-reset;
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  column-gap: 20px;
 }
 
 @media (min-width: $tablet-width) {

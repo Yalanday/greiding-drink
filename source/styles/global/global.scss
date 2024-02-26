@@ -5,8 +5,14 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0 auto;
+  position: relative;
   font-family: $font-page;
   color: $dark-color;
   min-height: 100vh;

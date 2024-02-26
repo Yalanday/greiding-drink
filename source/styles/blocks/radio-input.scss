@@ -37,7 +37,8 @@
 }
 
 .radio__input:hover,
-.radio__input:focus {
+.radio__input:focus,
+.radio__input:focus-within {
   border-color: $basic-violet;
   background: radial-gradient(rgba(120, 89, 207, 0.25) 8px, $catalog-bg 2px);
   outline: none;
@@ -58,7 +59,7 @@
   pointer-events: none;
 }
 
-.radio__label:has(.radiola:disabled) {
+.radio__label:has(.radio__input:disabled) {
   color: $light-grey-b;
   pointer-events: none;
 }

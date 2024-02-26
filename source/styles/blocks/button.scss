@@ -10,9 +10,11 @@
   line-height: 24px;
   font-weight: 400;
   cursor: pointer;
+  outline: none;
   transition: background-color 0.3s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $basic-violet-hover;
   }
 
@@ -30,7 +32,8 @@
     color: $basic-violet;
   }
 
-  &--reset:hover {
+  &--reset:hover,
+  &--reset:focus {
     color: $default-white;
   }
 

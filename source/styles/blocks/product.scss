@@ -24,6 +24,10 @@
   max-width: 349px;
   padding: 40px 20px 21px;
   background-color: $default-white;
+}
+
+.product__card:hover,
+.product__card:focus-within {
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -39,6 +43,11 @@
   }
 }
 
+.product__link {
+  @include link-style;
+  outline: none;
+}
+
 .product__picture {
   display: flex;
   margin-bottom: 24px;
@@ -52,8 +61,8 @@
 
 .product__image {
   margin: 0 auto;
+  object-fit: cover;
 }
-
 
 .product__title {
   margin: 0;
